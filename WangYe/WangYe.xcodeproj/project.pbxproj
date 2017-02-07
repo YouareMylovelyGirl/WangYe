@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A46E4FA71E49E72E000756D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E4FA61E49E72E000756D9 /* main.m */; };
+		A46E4FAA1E49E72E000756D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E4FA91E49E72E000756D9 /* AppDelegate.m */; };
+		A46E4FB01E49E72E000756D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46E4FAE1E49E72E000756D9 /* Main.storyboard */; };
+		A46E4FB21E49E72E000756D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46E4FB11E49E72E000756D9 /* Assets.xcassets */; };
+		A46E4FB51E49E72E000756D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46E4FB31E49E72E000756D9 /* LaunchScreen.storyboard */; };
+		EB9D20D09D14BD36668062D1 /* libPods-WangYe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 835192F6E01FEDDEA8DF76F8 /* libPods-WangYe.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		835192F6E01FEDDEA8DF76F8 /* libPods-WangYe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WangYe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A46E4FA21E49E72E000756D9 /* WangYe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WangYe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A46E4FA61E49E72E000756D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A46E4FA81E49E72E000756D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		A46E4FA91E49E72E000756D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
+		A46E4FAF1E49E72E000756D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A46E4FB11E49E72E000756D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		A46E4FB41E49E72E000756D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A46E4FB61E49E72E000756D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A46E4FCF1E49EA9E000756D9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A46E4FD01E49EB0E000756D9 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
+		BA7F1492DCC0FBCA1BAD8BC8 /* Pods-WangYe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WangYe.release.xcconfig"; path = "Pods/Target Support Files/Pods-WangYe/Pods-WangYe.release.xcconfig"; sourceTree = "<group>"; };
+		F7EAA3C71D86B0212CC62309 /* Pods-WangYe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WangYe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WangYe/Pods-WangYe.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A46E4F9F1E49E72E000756D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB9D20D09D14BD36668062D1 /* libPods-WangYe.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BCB9AC4E68E11136A732A2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7EAA3C71D86B0212CC62309 /* Pods-WangYe.debug.xcconfig */,
+				BA7F1492DCC0FBCA1BAD8BC8 /* Pods-WangYe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9891628CED7438B56C16D29C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				835192F6E01FEDDEA8DF76F8 /* libPods-WangYe.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A46E4F991E49E72E000756D9 = {
+			isa = PBXGroup;
+			children = (
+				A46E4FA41E49E72E000756D9 /* WangYe */,
+				A46E4FA31E49E72E000756D9 /* Products */,
+				5BCB9AC4E68E11136A732A2D /* Pods */,
+				9891628CED7438B56C16D29C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A46E4FA31E49E72E000756D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A46E4FA21E49E72E000756D9 /* WangYe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A46E4FA41E49E72E000756D9 /* WangYe */ = {
+			isa = PBXGroup;
+			children = (
+				A46E4FC21E49E9F7000756D9 /* Other */,
+				A46E4FBC1E49E9D2000756D9 /* Category */,
+				A46E4FBD1E49E9D2000756D9 /* Define */,
+				A46E4FBE1E49E9D2000756D9 /* NetManager */,
+				A46E4FBF1E49E9D2000756D9 /* Pages(页面) */,
+				A46E4FC01E49E9D2000756D9 /* Resourse */,
+				A46E4FC11E49E9D2000756D9 /* Vendor */,
+				A46E4FA51E49E72E000756D9 /* Supporting Files */,
+			);
+			path = WangYe;
+			sourceTree = "<group>";
+		};
+		A46E4FA51E49E72E000756D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A46E4FB61E49E72E000756D9 /* Info.plist */,
+				A46E4FA61E49E72E000756D9 /* main.m */,
+				A46E4FCF1E49EA9E000756D9 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A46E4FBC1E49E9D2000756D9 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		A46E4FBD1E49E9D2000756D9 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				A46E4FD01E49EB0E000756D9 /* Const.h */,
+			);
+			path = Define;
+			sourceTree = "<group>";
+		};
+		A46E4FBE1E49E9D2000756D9 /* NetManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetManager;
+			sourceTree = "<group>";
+		};
+		A46E4FBF1E49E9D2000756D9 /* Pages(页面) */ = {
+			isa = PBXGroup;
+			children = (
+				A46E4FC31E49EA7C000756D9 /*  Essence(精华) */,
+				A46E4FC71E49EA7C000756D9 /* Home(主页) */,
+				A46E4FCB1E49EA7C000756D9 /* List(专栏) */,
+			);
+			path = "Pages(页面)";
+			sourceTree = "<group>";
+		};
+		A46E4FC01E49E9D2000756D9 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				A46E4FAE1E49E72E000756D9 /* Main.storyboard */,
+				A46E4FB11E49E72E000756D9 /* Assets.xcassets */,
+				A46E4FB31E49E72E000756D9 /* LaunchScreen.storyboard */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
+		A46E4FC11E49E9D2000756D9 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		A46E4FC21E49E9F7000756D9 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				A46E4FA81E49E72E000756D9 /* AppDelegate.h */,
+				A46E4FA91E49E72E000756D9 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		A46E4FC31E49EA7C000756D9 /*  Essence(精华) */ = {
+			isa = PBXGroup;
+			children = (
+				A46E4FC41E49EA7C000756D9 /* Controller */,
+				A46E4FC51E49EA7C000756D9 /* Model */,
+				A46E4FC61E49EA7C000756D9 /* View */,
+			);
+			path = " Essence(精华)";
+			sourceTree = "<group>";
+		};
+		A46E4FC41E49EA7C000756D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A46E4FC51E49EA7C000756D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A46E4FC61E49EA7C000756D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A46E4FC71E49EA7C000756D9 /* Home(主页) */ = {
+			isa = PBXGroup;
+			children = (
+				A46E4FC81E49EA7C000756D9 /* Controller */,
+				A46E4FC91E49EA7C000756D9 /* Model */,
+				A46E4FCA1E49EA7C000756D9 /* View */,
+			);
+			path = "Home(主页)";
+			sourceTree = "<group>";
+		};
+		A46E4FC81E49EA7C000756D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A46E4FC91E49EA7C000756D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A46E4FCA1E49EA7C000756D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A46E4FCB1E49EA7C000756D9 /* List(专栏) */ = {
+			isa = PBXGroup;
+			children = (
+				A46E4FCC1E49EA7C000756D9 /* Controller */,
+				A46E4FCD1E49EA7C000756D9 /* Model */,
+				A46E4FCE1E49EA7C000756D9 /* View */,
+			);
+			path = "List(专栏)";
+			sourceTree = "<group>";
+		};
+		A46E4FCC1E49EA7C000756D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A46E4FCD1E49EA7C000756D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A46E4FCE1E49EA7C000756D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A46E4FA11E49E72E000756D9 /* WangYe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A46E4FB91E49E72E000756D9 /* Build configuration list for PBXNativeTarget "WangYe" */;
+			buildPhases = (
+				7663BF42C98DFCD86AFA491E /* [CP] Check Pods Manifest.lock */,
+				A46E4F9E1E49E72E000756D9 /* Sources */,
+				A46E4F9F1E49E72E000756D9 /* Frameworks */,
+				A46E4FA01E49E72E000756D9 /* Resources */,
+				600BC21FBC5B44620F89279A /* [CP] Embed Pods Frameworks */,
+				49FDDB0BA9D37F8D1C50E14F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WangYe;
+			productName = WangYe;
+			productReference = A46E4FA21E49E72E000756D9 /* WangYe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A46E4F9A1E49E72E000756D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = YG;
+				TargetAttributes = {
+					A46E4FA11E49E72E000756D9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A46E4F9D1E49E72E000756D9 /* Build configuration list for PBXProject "WangYe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A46E4F991E49E72E000756D9;
+			productRefGroup = A46E4FA31E49E72E000756D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A46E4FA11E49E72E000756D9 /* WangYe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A46E4FA01E49E72E000756D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A46E4FB51E49E72E000756D9 /* LaunchScreen.storyboard in Resources */,
+				A46E4FB21E49E72E000756D9 /* Assets.xcassets in Resources */,
+				A46E4FB01E49E72E000756D9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49FDDB0BA9D37F8D1C50E14F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WangYe/Pods-WangYe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		600BC21FBC5B44620F89279A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WangYe/Pods-WangYe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7663BF42C98DFCD86AFA491E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A46E4F9E1E49E72E000756D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A46E4FAA1E49E72E000756D9 /* AppDelegate.m in Sources */,
+				A46E4FA71E49E72E000756D9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A46E4FAE1E49E72E000756D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A46E4FAF1E49E72E000756D9 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		A46E4FB31E49E72E000756D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A46E4FB41E49E72E000756D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A46E4FB71E49E72E000756D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A46E4FB81E49E72E000756D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A46E4FBA1E49E72E000756D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7EAA3C71D86B0212CC62309 /* Pods-WangYe.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$PRODUCT_NAME/PrefixHeader.pch";
+				INFOPLIST_FILE = WangYe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.YG.WangYe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A46E4FBB1E49E72E000756D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA7F1492DCC0FBCA1BAD8BC8 /* Pods-WangYe.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$PRODUCT_NAME/PrefixHeader.pch";
+				INFOPLIST_FILE = WangYe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.YG.WangYe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A46E4F9D1E49E72E000756D9 /* Build configuration list for PBXProject "WangYe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A46E4FB71E49E72E000756D9 /* Debug */,
+				A46E4FB81E49E72E000756D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A46E4FB91E49E72E000756D9 /* Build configuration list for PBXNativeTarget "WangYe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A46E4FBA1E49E72E000756D9 /* Debug */,
+				A46E4FBB1E49E72E000756D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A46E4F9A1E49E72E000756D9 /* Project object */;
+}

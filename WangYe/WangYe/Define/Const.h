@@ -32,7 +32,7 @@
 #define YGRandomColor YGRGBColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
 // 主题背景颜色
-#define YGBgColor MRRGBColor(246, 246, 246)
+#define YGBgColor YGRGBColor(242, 244, 255)
 #endif
 
 #endif /* Const_h */

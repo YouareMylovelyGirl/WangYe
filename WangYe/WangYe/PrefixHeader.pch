@@ -33,4 +33,6 @@
 #import "UIScrollView+Refresh.h"
 
 #import "NetManager.h"
+
+#import "NSString+YG.h"
 #endif /* PrefixHeader_pch */

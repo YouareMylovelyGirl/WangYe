@@ -13,6 +13,10 @@
 		A418B2391E4A1EB80056F14B /* NSString+YG.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2381E4A1EB80056F14B /* NSString+YG.m */; };
 		A418B23C1E4A22410056F14B /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B23B1E4A22410056F14B /* BaseNetManager.m */; };
 		A418B23F1E4A23F50056F14B /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B23E1E4A23F50056F14B /* NetManager.m */; };
+		A418B2421E4A27E30056F14B /* YGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2411E4A27E30056F14B /* YGTabBarController.m */; };
+		A418B24E1E4A289A0056F14B /* YGEssenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B24D1E4A289A0056F14B /* YGEssenceController.m */; };
+		A418B2511E4A28AE0056F14B /* YGHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2501E4A28AE0056F14B /* YGHomeController.m */; };
+		A418B2541E4A28C30056F14B /* YGListController.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2531E4A28C30056F14B /* YGListController.m */; };
 		A46E4FA71E49E72E000756D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E4FA61E49E72E000756D9 /* main.m */; };
 		A46E4FAA1E49E72E000756D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E4FA91E49E72E000756D9 /* AppDelegate.m */; };
 		A46E4FB01E49E72E000756D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46E4FAE1E49E72E000756D9 /* Main.storyboard */; };
@@ -35,10 +39,18 @@
 		A418B23B1E4A22410056F14B /* BaseNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetManager.m; sourceTree = "<group>"; };
 		A418B23D1E4A23F50056F14B /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
 		A418B23E1E4A23F50056F14B /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
+		A418B2401E4A27E30056F14B /* YGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGTabBarController.h; sourceTree = "<group>"; };
+		A418B2411E4A27E30056F14B /* YGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGTabBarController.m; sourceTree = "<group>"; };
+		A418B24C1E4A289A0056F14B /* YGEssenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGEssenceController.h; sourceTree = "<group>"; };
+		A418B24D1E4A289A0056F14B /* YGEssenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGEssenceController.m; sourceTree = "<group>"; };
+		A418B24F1E4A28AE0056F14B /* YGHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGHomeController.h; sourceTree = "<group>"; };
+		A418B2501E4A28AE0056F14B /* YGHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGHomeController.m; sourceTree = "<group>"; };
+		A418B2521E4A28C30056F14B /* YGListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGListController.h; sourceTree = "<group>"; };
+		A418B2531E4A28C30056F14B /* YGListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGListController.m; sourceTree = "<group>"; };
 		A46E4FA21E49E72E000756D9 /* WangYe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WangYe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46E4FA61E49E72E000756D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A46E4FA81E49E72E000756D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
-		A46E4FA91E49E72E000756D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
+		A46E4FA81E49E72E000756D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A46E4FA91E49E72E000756D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A46E4FAF1E49E72E000756D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A46E4FB11E49E72E000756D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		A46E4FB41E49E72E000756D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,7 +111,8 @@
 		A46E4FA41E49E72E000756D9 /* WangYe */ = {
 			isa = PBXGroup;
 			children = (
-				A46E4FC21E49E9F7000756D9 /* Other */,
+				A46E4FA81E49E72E000756D9 /* AppDelegate.h */,
+				A46E4FA91E49E72E000756D9 /* AppDelegate.m */,
 				A46E4FBF1E49E9D2000756D9 /* Pages(页面) */,
 				A46E4FBC1E49E9D2000756D9 /* Category */,
 				A46E4FBD1E49E9D2000756D9 /* Define */,
@@ -158,6 +171,7 @@
 		A46E4FBF1E49E9D2000756D9 /* Pages(页面) */ = {
 			isa = PBXGroup;
 			children = (
+				A46E4FC21E49E9F7000756D9 /* Other */,
 				A46E4FC31E49EA7C000756D9 /*  Essence(精华) */,
 				A46E4FC71E49EA7C000756D9 /* Home(主页) */,
 				A46E4FCB1E49EA7C000756D9 /* List(专栏) */,
@@ -185,10 +199,11 @@
 		A46E4FC21E49E9F7000756D9 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				A46E4FA81E49E72E000756D9 /* AppDelegate.h */,
-				A46E4FA91E49E72E000756D9 /* AppDelegate.m */,
+				A418B2401E4A27E30056F14B /* YGTabBarController.h */,
+				A418B2411E4A27E30056F14B /* YGTabBarController.m */,
 			);
-			path = Other;
+			name = Other;
+			path = ../Other;
 			sourceTree = "<group>";
 		};
 		A46E4FC31E49EA7C000756D9 /*  Essence(精华) */ = {
@@ -204,6 +219,8 @@
 		A46E4FC41E49EA7C000756D9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A418B24C1E4A289A0056F14B /* YGEssenceController.h */,
+				A418B24D1E4A289A0056F14B /* YGEssenceController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,6 +252,8 @@
 		A46E4FC81E49EA7C000756D9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A418B24F1E4A28AE0056F14B /* YGHomeController.h */,
+				A418B2501E4A28AE0056F14B /* YGHomeController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -266,6 +285,8 @@
 		A46E4FCC1E49EA7C000756D9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A418B2521E4A28C30056F14B /* YGListController.h */,
+				A418B2531E4A28C30056F14B /* YGListController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,6 +334,7 @@
 		A46E4F9A1E49E72E000756D9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YG;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = YG;
 				TargetAttributes = {
@@ -408,11 +430,15 @@
 			files = (
 				A418B2331E4A1B330056F14B /* UIView+HUD.m in Sources */,
 				A418B23F1E4A23F50056F14B /* NetManager.m in Sources */,
+				A418B2511E4A28AE0056F14B /* YGHomeController.m in Sources */,
 				A418B2391E4A1EB80056F14B /* NSString+YG.m in Sources */,
 				A418B2301E4A1A6B0056F14B /* NSObject+Parse.m in Sources */,
+				A418B2421E4A27E30056F14B /* YGTabBarController.m in Sources */,
 				A46E4FAA1E49E72E000756D9 /* AppDelegate.m in Sources */,
 				A46E4FA71E49E72E000756D9 /* main.m in Sources */,
 				A418B23C1E4A22410056F14B /* BaseNetManager.m in Sources */,
+				A418B2541E4A28C30056F14B /* YGListController.m in Sources */,
+				A418B24E1E4A289A0056F14B /* YGEssenceController.m in Sources */,
 				A418B2361E4A1CFE0056F14B /* UIScrollView+Refresh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

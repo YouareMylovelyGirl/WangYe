@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A418B2301E4A1A6B0056F14B /* NSObject+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B22F1E4A1A6B0056F14B /* NSObject+Parse.m */; };
+		A418B2331E4A1B330056F14B /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2321E4A1B330056F14B /* UIView+HUD.m */; };
+		A418B2361E4A1CFE0056F14B /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2351E4A1CFE0056F14B /* UIScrollView+Refresh.m */; };
+		A418B2391E4A1EB80056F14B /* NSString+YG.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2381E4A1EB80056F14B /* NSString+YG.m */; };
+		A418B23C1E4A22410056F14B /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B23B1E4A22410056F14B /* BaseNetManager.m */; };
+		A418B23F1E4A23F50056F14B /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B23E1E4A23F50056F14B /* NetManager.m */; };
 		A46E4FA71E49E72E000756D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E4FA61E49E72E000756D9 /* main.m */; };
 		A46E4FAA1E49E72E000756D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E4FA91E49E72E000756D9 /* AppDelegate.m */; };
 		A46E4FB01E49E72E000756D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46E4FAE1E49E72E000756D9 /* Main.storyboard */; };
@@ -17,6 +23,18 @@
 
 /* Begin PBXFileReference section */
 		835192F6E01FEDDEA8DF76F8 /* libPods-WangYe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WangYe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A418B22E1E4A1A6B0056F14B /* NSObject+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Parse.h"; sourceTree = "<group>"; };
+		A418B22F1E4A1A6B0056F14B /* NSObject+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Parse.m"; sourceTree = "<group>"; };
+		A418B2311E4A1B330056F14B /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
+		A418B2321E4A1B330056F14B /* UIView+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HUD.m"; sourceTree = "<group>"; };
+		A418B2341E4A1CFE0056F14B /* UIScrollView+Refresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refresh.h"; sourceTree = "<group>"; };
+		A418B2351E4A1CFE0056F14B /* UIScrollView+Refresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Refresh.m"; sourceTree = "<group>"; };
+		A418B2371E4A1EB80056F14B /* NSString+YG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YG.h"; sourceTree = "<group>"; };
+		A418B2381E4A1EB80056F14B /* NSString+YG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YG.m"; sourceTree = "<group>"; };
+		A418B23A1E4A22410056F14B /* BaseNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNetManager.h; sourceTree = "<group>"; };
+		A418B23B1E4A22410056F14B /* BaseNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetManager.m; sourceTree = "<group>"; };
+		A418B23D1E4A23F50056F14B /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
+		A418B23E1E4A23F50056F14B /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
 		A46E4FA21E49E72E000756D9 /* WangYe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WangYe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46E4FA61E49E72E000756D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A46E4FA81E49E72E000756D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -82,10 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				A46E4FC21E49E9F7000756D9 /* Other */,
+				A46E4FBF1E49E9D2000756D9 /* Pages(页面) */,
 				A46E4FBC1E49E9D2000756D9 /* Category */,
 				A46E4FBD1E49E9D2000756D9 /* Define */,
 				A46E4FBE1E49E9D2000756D9 /* NetManager */,
-				A46E4FBF1E49E9D2000756D9 /* Pages(页面) */,
 				A46E4FC01E49E9D2000756D9 /* Resourse */,
 				A46E4FC11E49E9D2000756D9 /* Vendor */,
 				A46E4FA51E49E72E000756D9 /* Supporting Files */,
@@ -106,6 +124,14 @@
 		A46E4FBC1E49E9D2000756D9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				A418B22E1E4A1A6B0056F14B /* NSObject+Parse.h */,
+				A418B22F1E4A1A6B0056F14B /* NSObject+Parse.m */,
+				A418B2311E4A1B330056F14B /* UIView+HUD.h */,
+				A418B2321E4A1B330056F14B /* UIView+HUD.m */,
+				A418B2341E4A1CFE0056F14B /* UIScrollView+Refresh.h */,
+				A418B2351E4A1CFE0056F14B /* UIScrollView+Refresh.m */,
+				A418B2371E4A1EB80056F14B /* NSString+YG.h */,
+				A418B2381E4A1EB80056F14B /* NSString+YG.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -121,6 +147,10 @@
 		A46E4FBE1E49E9D2000756D9 /* NetManager */ = {
 			isa = PBXGroup;
 			children = (
+				A418B23A1E4A22410056F14B /* BaseNetManager.h */,
+				A418B23B1E4A22410056F14B /* BaseNetManager.m */,
+				A418B23D1E4A23F50056F14B /* NetManager.h */,
+				A418B23E1E4A23F50056F14B /* NetManager.m */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -376,8 +406,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A418B2331E4A1B330056F14B /* UIView+HUD.m in Sources */,
+				A418B23F1E4A23F50056F14B /* NetManager.m in Sources */,
+				A418B2391E4A1EB80056F14B /* NSString+YG.m in Sources */,
+				A418B2301E4A1A6B0056F14B /* NSObject+Parse.m in Sources */,
 				A46E4FAA1E49E72E000756D9 /* AppDelegate.m in Sources */,
 				A46E4FA71E49E72E000756D9 /* main.m in Sources */,
+				A418B23C1E4A22410056F14B /* BaseNetManager.m in Sources */,
+				A418B2361E4A1CFE0056F14B /* UIScrollView+Refresh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,7 +534,7 @@
 			baseConfigurationReference = F7EAA3C71D86B0212CC62309 /* Pods-WangYe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "$PRODUCT_NAME/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = $PRODUCT_NAME/PrefixHeader.pch;
 				INFOPLIST_FILE = WangYe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.YG.WangYe;
@@ -511,7 +547,7 @@
 			baseConfigurationReference = BA7F1492DCC0FBCA1BAD8BC8 /* Pods-WangYe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "$PRODUCT_NAME/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = $PRODUCT_NAME/PrefixHeader.pch;
 				INFOPLIST_FILE = WangYe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.YG.WangYe;

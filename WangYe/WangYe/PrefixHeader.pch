@@ -15,8 +15,11 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+
+#define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
 #import <Masonry.h>
+
 #import <BlocksKit.h>
 #import <BlocksKit+UIKit.h>
 
@@ -25,9 +28,9 @@
 #import <MJRefresh.h>
 #import <MBProgressHUD.h>
 
-//#import "UIView+HUD.h"
-//#import "NSObject+Parse.h"
-//#import "UIScrollView+Refresh.h"
+#import "UIView+HUD.h"
+#import "NSObject+Parse.h"
+#import "UIScrollView+Refresh.h"
 
 #import "NetManager.h"
 #endif /* PrefixHeader_pch */

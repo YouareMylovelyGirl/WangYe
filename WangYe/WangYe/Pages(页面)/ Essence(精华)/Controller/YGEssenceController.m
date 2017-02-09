@@ -9,6 +9,13 @@
 #import "YGEssenceController.h"
 
 @interface YGEssenceController ()
+/** 年 */
+@property(nonatomic, assign) NSInteger year;
+/** 月 */
+@property(nonatomic, assign) NSInteger month;
+/** 日 */
+@property(nonatomic, assign) NSInteger day;
+
 
 @end
 

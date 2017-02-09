@@ -32,6 +32,8 @@
     [UIImageView appearance].contentMode = UIViewContentModeScaleAspectFill;
     [UIImageView appearance].clipsToBounds = YES;
     [UICollectionView appearance].backgroundColor = YGBgColor;
+    [UIImageView appearance].contentMode = UIViewContentModeScaleAspectFill;
+    [UIImageView appearance].clipsToBounds = YES;
 }
 
 #pragma mark - 创建所有tabBar子控制器
@@ -44,7 +46,7 @@
     UINavigationController *homeNavi = [[UINavigationController alloc] initWithRootViewController:homeVC];
     
     YGEssenceController *essenceVC = [[YGEssenceController alloc] initWithStyle:UITableViewStylePlain];
-    essenceVC.title = @"精华";
+    essenceVC.title = @"夜读";
     essenceVC.tabBarItem.image = @"tab_btn_list_default".yg_image;
     essenceVC.tabBarItem.selectedImage = @"tab_btn_list_select".yg_image;
     UINavigationController *essenceNavi = [[UINavigationController alloc] initWithRootViewController:essenceVC];

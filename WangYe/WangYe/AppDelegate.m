@@ -16,6 +16,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [NetManager GETEssenceItem:@"0" completionHandler:^(YGEssenceItem *essences, NSError *error) {
+        NSLog(@"");
+    }];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[YGTabBarController alloc] init];
     [self.window makeKeyAndVisible];

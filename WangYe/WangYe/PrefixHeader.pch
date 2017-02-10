@@ -31,6 +31,7 @@
 #import "UIView+HUD.h"
 #import "NSObject+Parse.h"
 #import "UIScrollView+Refresh.h"
+#import <UITableView+FDTemplateLayoutCell.h>
 
 #import "NetManager.h"
 

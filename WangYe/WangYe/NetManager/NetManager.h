@@ -7,7 +7,7 @@
 //
 
 #import "BaseNetManager.h"
-#import "YGSentenceItem.h"
+#import "YGEssenceItem.h"
 @interface NetManager : BaseNetManager
-+ (id)POSTSentenceItemWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day completionHandler:(void(^)(NSArray <YGSentenceItem *>*sentenceItems, NSError *error))completionHandler;
++ (id)GETEssenceItem:(NSString *)lastKey completionHandler:(void(^)(YGEssenceItem *essences, NSError *error))completionHandler;
 @end

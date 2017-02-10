@@ -9,38 +9,26 @@
 #import "UIScrollView+Refresh.h"
 
 @implementation UIScrollView (Refresh)
-- (void)addHeaderRefresh:(void (^)())block
-{
+- (void)addHeaderRefresh:(void(^)())block{
     self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:block];
 }
-
-- (void)beginHeaderRefresh
-{
+- (void)endHeaderRefresh{
+    [self.mj_header endRefreshing];
+}
+- (void)beginHeaderRefresh{
     [self.mj_header beginRefreshing];
 }
 
-- (void)endHeaderRefresh
-{
-    [self.mj_header endRefreshing];
+- (void)addFooterRefresh:(void(^)())block{
+    self.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:block];
 }
-
-- (void)addFooterRefresh:(void (^)())block
-{
-    self.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:block];
-}
-
-- (void)endFooterRefresh
-{
+- (void)endFooterRefresh{
     [self.mj_footer endRefreshing];
 }
-
-- (void)resetFooter
-{
-    [self.mj_footer resetNoMoreData];
-}
-
-- (void)endFooterWithNoMore
-{
+- (void)endFooterWithNoMore{
     [self.mj_footer endRefreshingWithNoMoreData];
+}
+- (void)resetFooter{
+    [self.mj_footer resetNoMoreData];
 }
 @end

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A40CA0F91E4CBD8800E6EB52 /* YGSentenceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A40CA0F81E4CBD8800E6EB52 /* YGSentenceItem.m */; };
-		A40CA0FC1E4CC23900E6EB52 /* YGSentenceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A40CA0FB1E4CC23900E6EB52 /* YGSentenceCell.m */; };
 		A418B2301E4A1A6B0056F14B /* NSObject+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B22F1E4A1A6B0056F14B /* NSObject+Parse.m */; };
 		A418B2331E4A1B330056F14B /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2321E4A1B330056F14B /* UIView+HUD.m */; };
 		A418B2361E4A1CFE0056F14B /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2351E4A1CFE0056F14B /* UIScrollView+Refresh.m */; };
@@ -19,6 +17,7 @@
 		A418B24E1E4A289A0056F14B /* YGEssenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B24D1E4A289A0056F14B /* YGEssenceController.m */; };
 		A418B2511E4A28AE0056F14B /* YGHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2501E4A28AE0056F14B /* YGHomeController.m */; };
 		A418B2541E4A28C30056F14B /* YGListController.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2531E4A28C30056F14B /* YGListController.m */; };
+		A41B089F1E4E11D200B0A2EE /* YGEssenceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A41B089E1E4E11D200B0A2EE /* YGEssenceItem.m */; };
 		A46E4FA71E49E72E000756D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E4FA61E49E72E000756D9 /* main.m */; };
 		A46E4FAA1E49E72E000756D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E4FA91E49E72E000756D9 /* AppDelegate.m */; };
 		A46E4FB01E49E72E000756D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46E4FAE1E49E72E000756D9 /* Main.storyboard */; };
@@ -29,10 +28,6 @@
 
 /* Begin PBXFileReference section */
 		835192F6E01FEDDEA8DF76F8 /* libPods-WangYe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WangYe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A40CA0F71E4CBD8800E6EB52 /* YGSentenceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGSentenceItem.h; sourceTree = "<group>"; };
-		A40CA0F81E4CBD8800E6EB52 /* YGSentenceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGSentenceItem.m; sourceTree = "<group>"; };
-		A40CA0FA1E4CC23900E6EB52 /* YGSentenceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGSentenceCell.h; sourceTree = "<group>"; };
-		A40CA0FB1E4CC23900E6EB52 /* YGSentenceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGSentenceCell.m; sourceTree = "<group>"; wrapsLines = 0; };
 		A418B22E1E4A1A6B0056F14B /* NSObject+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Parse.h"; sourceTree = "<group>"; };
 		A418B22F1E4A1A6B0056F14B /* NSObject+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Parse.m"; sourceTree = "<group>"; };
 		A418B2311E4A1B330056F14B /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
@@ -53,6 +48,8 @@
 		A418B2501E4A28AE0056F14B /* YGHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGHomeController.m; sourceTree = "<group>"; };
 		A418B2521E4A28C30056F14B /* YGListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGListController.h; sourceTree = "<group>"; };
 		A418B2531E4A28C30056F14B /* YGListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGListController.m; sourceTree = "<group>"; };
+		A41B089D1E4E11D200B0A2EE /* YGEssenceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGEssenceItem.h; sourceTree = "<group>"; };
+		A41B089E1E4E11D200B0A2EE /* YGEssenceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGEssenceItem.m; sourceTree = "<group>"; };
 		A46E4FA21E49E72E000756D9 /* WangYe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WangYe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46E4FA61E49E72E000756D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A46E4FA81E49E72E000756D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -234,8 +231,8 @@
 		A46E4FC51E49EA7C000756D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A40CA0F71E4CBD8800E6EB52 /* YGSentenceItem.h */,
-				A40CA0F81E4CBD8800E6EB52 /* YGSentenceItem.m */,
+				A41B089D1E4E11D200B0A2EE /* YGEssenceItem.h */,
+				A41B089E1E4E11D200B0A2EE /* YGEssenceItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -243,8 +240,6 @@
 		A46E4FC61E49EA7C000756D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A40CA0FA1E4CC23900E6EB52 /* YGSentenceCell.h */,
-				A40CA0FB1E4CC23900E6EB52 /* YGSentenceCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -445,9 +440,8 @@
 				A418B2391E4A1EB80056F14B /* NSString+YG.m in Sources */,
 				A418B2301E4A1A6B0056F14B /* NSObject+Parse.m in Sources */,
 				A418B2421E4A27E30056F14B /* YGTabBarController.m in Sources */,
-				A40CA0F91E4CBD8800E6EB52 /* YGSentenceItem.m in Sources */,
+				A41B089F1E4E11D200B0A2EE /* YGEssenceItem.m in Sources */,
 				A46E4FAA1E49E72E000756D9 /* AppDelegate.m in Sources */,
-				A40CA0FC1E4CC23900E6EB52 /* YGSentenceCell.m in Sources */,
 				A46E4FA71E49E72E000756D9 /* main.m in Sources */,
 				A418B23C1E4A22410056F14B /* BaseNetManager.m in Sources */,
 				A418B2541E4A28C30056F14B /* YGListController.m in Sources */,

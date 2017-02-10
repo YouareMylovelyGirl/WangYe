@@ -20,7 +20,7 @@
 }
 
 - (void)addFooterRefresh:(void(^)())block{
-    self.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:block];
+    self.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:block];
 }
 - (void)endFooterRefresh{
     [self.mj_footer endRefreshing];

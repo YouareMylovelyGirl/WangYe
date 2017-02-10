@@ -18,6 +18,9 @@
 		A418B2511E4A28AE0056F14B /* YGHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2501E4A28AE0056F14B /* YGHomeController.m */; };
 		A418B2541E4A28C30056F14B /* YGListController.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2531E4A28C30056F14B /* YGListController.m */; };
 		A41B089F1E4E11D200B0A2EE /* YGEssenceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A41B089E1E4E11D200B0A2EE /* YGEssenceItem.m */; };
+		A41B08A21E4E1AAC00B0A2EE /* YGEssenceCommomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A41B08A11E4E1AAC00B0A2EE /* YGEssenceCommomCell.m */; };
+		A41B08A51E4E1F7F00B0A2EE /* YGEssenceImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A41B08A41E4E1F7F00B0A2EE /* YGEssenceImageCell.m */; };
+		A41B08A81E4E20C500B0A2EE /* YGEssenceBigCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A41B08A71E4E20C500B0A2EE /* YGEssenceBigCell.m */; };
 		A46E4FA71E49E72E000756D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E4FA61E49E72E000756D9 /* main.m */; };
 		A46E4FAA1E49E72E000756D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E4FA91E49E72E000756D9 /* AppDelegate.m */; };
 		A46E4FB01E49E72E000756D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46E4FAE1E49E72E000756D9 /* Main.storyboard */; };
@@ -50,6 +53,12 @@
 		A418B2531E4A28C30056F14B /* YGListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGListController.m; sourceTree = "<group>"; };
 		A41B089D1E4E11D200B0A2EE /* YGEssenceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGEssenceItem.h; sourceTree = "<group>"; };
 		A41B089E1E4E11D200B0A2EE /* YGEssenceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGEssenceItem.m; sourceTree = "<group>"; };
+		A41B08A01E4E1AAC00B0A2EE /* YGEssenceCommomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGEssenceCommomCell.h; sourceTree = "<group>"; };
+		A41B08A11E4E1AAC00B0A2EE /* YGEssenceCommomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGEssenceCommomCell.m; sourceTree = "<group>"; };
+		A41B08A31E4E1F7F00B0A2EE /* YGEssenceImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGEssenceImageCell.h; sourceTree = "<group>"; };
+		A41B08A41E4E1F7F00B0A2EE /* YGEssenceImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGEssenceImageCell.m; sourceTree = "<group>"; };
+		A41B08A61E4E20C500B0A2EE /* YGEssenceBigCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGEssenceBigCell.h; sourceTree = "<group>"; };
+		A41B08A71E4E20C500B0A2EE /* YGEssenceBigCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGEssenceBigCell.m; sourceTree = "<group>"; };
 		A46E4FA21E49E72E000756D9 /* WangYe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WangYe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46E4FA61E49E72E000756D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A46E4FA81E49E72E000756D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -240,6 +249,12 @@
 		A46E4FC61E49EA7C000756D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A41B08A01E4E1AAC00B0A2EE /* YGEssenceCommomCell.h */,
+				A41B08A11E4E1AAC00B0A2EE /* YGEssenceCommomCell.m */,
+				A41B08A31E4E1F7F00B0A2EE /* YGEssenceImageCell.h */,
+				A41B08A41E4E1F7F00B0A2EE /* YGEssenceImageCell.m */,
+				A41B08A61E4E20C500B0A2EE /* YGEssenceBigCell.h */,
+				A41B08A71E4E20C500B0A2EE /* YGEssenceBigCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -438,6 +453,8 @@
 				A418B23F1E4A23F50056F14B /* NetManager.m in Sources */,
 				A418B2511E4A28AE0056F14B /* YGHomeController.m in Sources */,
 				A418B2391E4A1EB80056F14B /* NSString+YG.m in Sources */,
+				A41B08A21E4E1AAC00B0A2EE /* YGEssenceCommomCell.m in Sources */,
+				A41B08A81E4E20C500B0A2EE /* YGEssenceBigCell.m in Sources */,
 				A418B2301E4A1A6B0056F14B /* NSObject+Parse.m in Sources */,
 				A418B2421E4A27E30056F14B /* YGTabBarController.m in Sources */,
 				A41B089F1E4E11D200B0A2EE /* YGEssenceItem.m in Sources */,
@@ -445,6 +462,7 @@
 				A46E4FA71E49E72E000756D9 /* main.m in Sources */,
 				A418B23C1E4A22410056F14B /* BaseNetManager.m in Sources */,
 				A418B2541E4A28C30056F14B /* YGListController.m in Sources */,
+				A41B08A51E4E1F7F00B0A2EE /* YGEssenceImageCell.m in Sources */,
 				A418B24E1E4A289A0056F14B /* YGEssenceController.m in Sources */,
 				A418B2361E4A1CFE0056F14B /* UIScrollView+Refresh.m in Sources */,
 			);

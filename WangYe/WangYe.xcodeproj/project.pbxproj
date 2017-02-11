@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A40E178F1E4EA77800CC4BD6 /* YGEssenceWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40E178E1E4EA77800CC4BD6 /* YGEssenceWebController.m */; };
 		A418B2301E4A1A6B0056F14B /* NSObject+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B22F1E4A1A6B0056F14B /* NSObject+Parse.m */; };
 		A418B2331E4A1B330056F14B /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2321E4A1B330056F14B /* UIView+HUD.m */; };
 		A418B2361E4A1CFE0056F14B /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2351E4A1CFE0056F14B /* UIScrollView+Refresh.m */; };
@@ -31,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		835192F6E01FEDDEA8DF76F8 /* libPods-WangYe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WangYe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A40E178D1E4EA77800CC4BD6 /* YGEssenceWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGEssenceWebController.h; sourceTree = "<group>"; };
+		A40E178E1E4EA77800CC4BD6 /* YGEssenceWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGEssenceWebController.m; sourceTree = "<group>"; };
 		A418B22E1E4A1A6B0056F14B /* NSObject+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Parse.h"; sourceTree = "<group>"; };
 		A418B22F1E4A1A6B0056F14B /* NSObject+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Parse.m"; sourceTree = "<group>"; };
 		A418B2311E4A1B330056F14B /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
@@ -233,6 +236,8 @@
 			children = (
 				A418B24C1E4A289A0056F14B /* YGEssenceController.h */,
 				A418B24D1E4A289A0056F14B /* YGEssenceController.m */,
+				A40E178D1E4EA77800CC4BD6 /* YGEssenceWebController.h */,
+				A40E178E1E4EA77800CC4BD6 /* YGEssenceWebController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 				A41B08A81E4E20C500B0A2EE /* YGEssenceBigCell.m in Sources */,
 				A418B2301E4A1A6B0056F14B /* NSObject+Parse.m in Sources */,
 				A418B2421E4A27E30056F14B /* YGTabBarController.m in Sources */,
+				A40E178F1E4EA77800CC4BD6 /* YGEssenceWebController.m in Sources */,
 				A41B089F1E4E11D200B0A2EE /* YGEssenceItem.m in Sources */,
 				A46E4FAA1E49E72E000756D9 /* AppDelegate.m in Sources */,
 				A46E4FA71E49E72E000756D9 /* main.m in Sources */,

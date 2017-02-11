@@ -17,8 +17,4 @@
 @property(nonatomic, strong) UILabel *detailLB;
 /** 分割线 */
 @property(nonatomic, strong) UIView *cellSeparator;
-
-
-
-
 @end

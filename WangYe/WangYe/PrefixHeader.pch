@@ -27,6 +27,7 @@
 #import <YYKit.h>
 #import <MJRefresh.h>
 #import <MBProgressHUD.h>
+#import <iCarousel.h>
 
 #import "UIView+HUD.h"
 #import "NSObject+Parse.h"

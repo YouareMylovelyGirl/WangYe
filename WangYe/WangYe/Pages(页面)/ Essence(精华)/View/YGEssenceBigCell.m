@@ -45,7 +45,7 @@
     if(_detailLB == nil) {
         UIView *lineView = [[UIView alloc] init];
         [self.contentView addSubview:lineView];
-        lineView.backgroundColor = YGRGBColor(244, 244, 244);
+        lineView.backgroundColor = YGRGBColor(235, 235, 235);
         [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.mas_equalTo(200);
             make.height.mas_equalTo(1);
@@ -92,7 +92,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 

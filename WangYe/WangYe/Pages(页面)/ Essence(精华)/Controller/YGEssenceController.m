@@ -40,12 +40,6 @@
 @property(nonatomic, strong) UIPageControl *pc;
 
 
-
-
-
-
-
-
 @end
 
 @implementation YGEssenceController
@@ -75,12 +69,13 @@ static NSString * const reuseIdentifier = @"Cell";
                 [weakSelf.view showMessage:@"出错啦, 请再试试.."];
             } else {
                 weakSelf.lastKey = essences.response.last_key;
-                [weakSelf.essenceArr removeAllObjects];
+                
+                [weakSelf.bannersArr removeAllObjects];
                 [weakSelf.essenceArr addObjectsFromArray:essences.response.feeds];
                 //装有滚动视图的数组
                 [weakSelf.bannersArr addObjectsFromArray:essences.response.banners];
-                
-                
+                //删除之前滚动视图中的元素, 避免继续叠加
+                [weakSelf.loopArr removeAllObjects];
                 for (YGEssenceResponseBannersItem *bannersItem in essences.response.banners) {
                     [weakSelf.loopArr addObject:bannersItem.image];
                 }
@@ -91,8 +86,12 @@ static NSString * const reuseIdentifier = @"Cell";
                     weakSelf.tableView.tableHeaderView = weakSelf.headerView;
                     [weakSelf.ic reloadData];
                     weakSelf.pc.numberOfPages = weakSelf.loopArr.count;
-                    weakSelf.titleLb.text = weakSelf.bannersArr.firstObject.post.title;
-                    NSLog(@"%@", weakSelf.titleLb.text);
+                    //如果第一个数组元素为空才进入到这个方法
+                    if (weakSelf.titleLb.text.length ==0) {
+                        weakSelf.titleLb.text = weakSelf.bannersArr.firstObject.post.title;
+                    }
+                    
+                    
                     _timer = [NSTimer bk_scheduledTimerWithTimeInterval:5 block:^(NSTimer *timer) {
                         [_ic scrollToItemAtIndex:_ic.currentItemIndex + 1 animated:YES];
                     } repeats:YES];
@@ -249,9 +248,8 @@ static NSString * const reuseIdentifier = @"Cell";
         }];
         iconIV.tag = 100;
     }
-    UIImageView *iconIV = [view viewWithTag:100];
-    
-     [iconIV setImageURL:[NSURL URLWithString:self.loopArr[index]]];
+    YYAnimatedImageView *iconIV = [view viewWithTag:100];
+    [iconIV setImageWithURL:[NSURL URLWithString:self.loopArr[index]] options:YYWebImageOptionIgnoreAnimatedImage];
     return view;
 }
 //只有变化时候才会来到这个方法

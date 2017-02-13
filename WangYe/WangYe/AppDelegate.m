@@ -16,7 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [NetManager GETEssenceItem:@"0" completionHandler:^(YGEssenceItem *essences, NSError *error) {
+    [NetManager GETDetailListOtherPage:@"http://baobab.kaiyanapp.com/api/v1/videos.bak?start=10&num=10&categoryName=%E9%9F%B3%E4%B9%90&strategy=date" conpletionHandler:^(YGDetailListItem *detailItem, NSError *error) {
         NSLog(@"");
     }];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];

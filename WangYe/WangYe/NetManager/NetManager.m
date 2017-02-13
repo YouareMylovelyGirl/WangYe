@@ -16,4 +16,28 @@
         !completionHandler ?: completionHandler([YGEssenceItem Parse:obj], error);
     }];
 }
+
++ (id)GetListItemCompletionHandler:(void (^)(NSArray<YGListItem *> *, NSError *))completionHandler
+{
+    NSString *path = @"http://baobab.kaiyanapp.com/api/v3/categories.Bak";
+    return [self GET:path param:nil completionHandler:^(id obj, NSError *error) {
+        !completionHandler ?: completionHandler([YGListItem Parse:obj], error);
+    }];
+}
+
++ (id)GETDetailListItem:(NSString *)detailName completionHandler:(void (^)(YGDetailListItem *, NSError *))completionHandler
+{
+    NSString *cateName = [detailName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *path = [NSString stringWithFormat:@"http://baobab.kaiyanapp.com/api/v1/videos.bak?categoryName=%@&num=10", cateName];
+    return [self GET:path param:nil completionHandler:^(id obj, NSError *error) {
+        !completionHandler ?: completionHandler([YGDetailListItem Parse:obj], error);
+    }];
+}
+
++ (id)GETDetailListOtherPage:(NSString *)path conpletionHandler:(void (^)(YGDetailListItem *, NSError *))completionHandler
+{
+    return [self GET:path param:nil completionHandler:^(id obj, NSError *error) {
+        !completionHandler ?: completionHandler([YGDetailListItem Parse:obj], error);
+    }];
+}
 @end

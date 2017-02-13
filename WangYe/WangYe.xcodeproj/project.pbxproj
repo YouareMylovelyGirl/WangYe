@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A40E178F1E4EA77800CC4BD6 /* YGEssenceWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40E178E1E4EA77800CC4BD6 /* YGEssenceWebController.m */; };
+		A4109E1B1E520A780075208C /* YGListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4109E1A1E520A780075208C /* YGListItem.m */; };
+		A4109E1E1E520A9A0075208C /* YGDetailListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4109E1D1E520A9A0075208C /* YGDetailListItem.m */; };
+		A4109E251E520B460075208C /* YGListDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4109E241E520B460075208C /* YGListDetailController.m */; };
+		A4109E281E520B660075208C /* YGListFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A4109E271E520B660075208C /* YGListFlowLayout.m */; };
+		A4109E2B1E520B8C0075208C /* YGListDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4109E2A1E520B8C0075208C /* YGListDetailCell.m */; };
+		A4109E311E520C5F0075208C /* YGListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4109E301E520C5F0075208C /* YGListCell.m */; };
 		A418B2301E4A1A6B0056F14B /* NSObject+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B22F1E4A1A6B0056F14B /* NSObject+Parse.m */; };
 		A418B2331E4A1B330056F14B /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2321E4A1B330056F14B /* UIView+HUD.m */; };
 		A418B2361E4A1CFE0056F14B /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2351E4A1CFE0056F14B /* UIScrollView+Refresh.m */; };
@@ -34,6 +40,18 @@
 		835192F6E01FEDDEA8DF76F8 /* libPods-WangYe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WangYe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40E178D1E4EA77800CC4BD6 /* YGEssenceWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGEssenceWebController.h; sourceTree = "<group>"; };
 		A40E178E1E4EA77800CC4BD6 /* YGEssenceWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGEssenceWebController.m; sourceTree = "<group>"; };
+		A4109E191E520A780075208C /* YGListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGListItem.h; sourceTree = "<group>"; };
+		A4109E1A1E520A780075208C /* YGListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGListItem.m; sourceTree = "<group>"; };
+		A4109E1C1E520A9A0075208C /* YGDetailListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YGDetailListItem.h; path = ../../../Model/YGDetailListItem.h; sourceTree = "<group>"; };
+		A4109E1D1E520A9A0075208C /* YGDetailListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YGDetailListItem.m; path = ../../../Model/YGDetailListItem.m; sourceTree = "<group>"; };
+		A4109E231E520B460075208C /* YGListDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGListDetailController.h; sourceTree = "<group>"; };
+		A4109E241E520B460075208C /* YGListDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGListDetailController.m; sourceTree = "<group>"; };
+		A4109E261E520B660075208C /* YGListFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YGListFlowLayout.h; path = ../Controller/DetailList/View/YGListFlowLayout.h; sourceTree = "<group>"; };
+		A4109E271E520B660075208C /* YGListFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YGListFlowLayout.m; path = ../Controller/DetailList/View/YGListFlowLayout.m; sourceTree = "<group>"; };
+		A4109E291E520B8C0075208C /* YGListDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGListDetailCell.h; sourceTree = "<group>"; };
+		A4109E2A1E520B8C0075208C /* YGListDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGListDetailCell.m; sourceTree = "<group>"; };
+		A4109E2F1E520C5F0075208C /* YGListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGListCell.h; sourceTree = "<group>"; };
+		A4109E301E520C5F0075208C /* YGListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGListCell.m; sourceTree = "<group>"; };
 		A418B22E1E4A1A6B0056F14B /* NSObject+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Parse.h"; sourceTree = "<group>"; };
 		A418B22F1E4A1A6B0056F14B /* NSObject+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Parse.m"; sourceTree = "<group>"; };
 		A418B2311E4A1B330056F14B /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
@@ -103,6 +121,77 @@
 				835192F6E01FEDDEA8DF76F8 /* libPods-WangYe.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4109E1F1E520B170075208C /* DetailList(列表详情) */ = {
+			isa = PBXGroup;
+			children = (
+				A4109E201E520B170075208C /* Controller */,
+				A4109E211E520B170075208C /* Model */,
+				A4109E221E520B170075208C /* View */,
+			);
+			name = "DetailList(列表详情)";
+			path = DetailList;
+			sourceTree = "<group>";
+		};
+		A4109E201E520B170075208C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4109E321E5222850075208C /* detailMovie(列表详情播放) */,
+				A4109E231E520B460075208C /* YGListDetailController.h */,
+				A4109E241E520B460075208C /* YGListDetailController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4109E211E520B170075208C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A4109E1C1E520A9A0075208C /* YGDetailListItem.h */,
+				A4109E1D1E520A9A0075208C /* YGDetailListItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4109E221E520B170075208C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4109E291E520B8C0075208C /* YGListDetailCell.h */,
+				A4109E2A1E520B8C0075208C /* YGListDetailCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4109E321E5222850075208C /* detailMovie(列表详情播放) */ = {
+			isa = PBXGroup;
+			children = (
+				A4109E331E5222850075208C /* Controller */,
+				A4109E341E5222850075208C /* Model */,
+				A4109E351E5222850075208C /* View */,
+			);
+			name = "detailMovie(列表详情播放)";
+			path = detailMovie;
+			sourceTree = "<group>";
+		};
+		A4109E331E5222850075208C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4109E341E5222850075208C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4109E351E5222850075208C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A46E4F991E49E72E000756D9 = {
@@ -310,6 +399,7 @@
 		A46E4FCC1E49EA7C000756D9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A4109E1F1E520B170075208C /* DetailList(列表详情) */,
 				A418B2521E4A28C30056F14B /* YGListController.h */,
 				A418B2531E4A28C30056F14B /* YGListController.m */,
 			);
@@ -319,6 +409,10 @@
 		A46E4FCD1E49EA7C000756D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A4109E261E520B660075208C /* YGListFlowLayout.h */,
+				A4109E271E520B660075208C /* YGListFlowLayout.m */,
+				A4109E191E520A780075208C /* YGListItem.h */,
+				A4109E1A1E520A780075208C /* YGListItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,6 +420,8 @@
 		A46E4FCE1E49EA7C000756D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A4109E2F1E520C5F0075208C /* YGListCell.h */,
+				A4109E301E520C5F0075208C /* YGListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -456,8 +552,10 @@
 			files = (
 				A418B2331E4A1B330056F14B /* UIView+HUD.m in Sources */,
 				A418B23F1E4A23F50056F14B /* NetManager.m in Sources */,
+				A4109E251E520B460075208C /* YGListDetailController.m in Sources */,
 				A418B2511E4A28AE0056F14B /* YGHomeController.m in Sources */,
 				A418B2391E4A1EB80056F14B /* NSString+YG.m in Sources */,
+				A4109E311E520C5F0075208C /* YGListCell.m in Sources */,
 				A41B08A21E4E1AAC00B0A2EE /* YGEssenceCommomCell.m in Sources */,
 				A41B08A81E4E20C500B0A2EE /* YGEssenceBigCell.m in Sources */,
 				A418B2301E4A1A6B0056F14B /* NSObject+Parse.m in Sources */,
@@ -465,12 +563,16 @@
 				A40E178F1E4EA77800CC4BD6 /* YGEssenceWebController.m in Sources */,
 				A41B089F1E4E11D200B0A2EE /* YGEssenceItem.m in Sources */,
 				A46E4FAA1E49E72E000756D9 /* AppDelegate.m in Sources */,
+				A4109E281E520B660075208C /* YGListFlowLayout.m in Sources */,
 				A46E4FA71E49E72E000756D9 /* main.m in Sources */,
+				A4109E1B1E520A780075208C /* YGListItem.m in Sources */,
 				A418B23C1E4A22410056F14B /* BaseNetManager.m in Sources */,
 				A418B2541E4A28C30056F14B /* YGListController.m in Sources */,
 				A41B08A51E4E1F7F00B0A2EE /* YGEssenceImageCell.m in Sources */,
 				A418B24E1E4A289A0056F14B /* YGEssenceController.m in Sources */,
 				A418B2361E4A1CFE0056F14B /* UIScrollView+Refresh.m in Sources */,
+				A4109E2B1E520B8C0075208C /* YGListDetailCell.m in Sources */,
+				A4109E1E1E520A9A0075208C /* YGDetailListItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

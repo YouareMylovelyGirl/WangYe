@@ -10,6 +10,7 @@
 #import "YGHomeController.h"
 #import "YGEssenceController.h"
 #import "YGListController.h"
+#import "YGListFlowLayout.h"
 @interface YGTabBarController ()
 
 @end
@@ -26,7 +27,7 @@
 - (void)allPropertySetup
 {
     [UITabBar appearance].tintColor = YGRGBColor(67, 67, 67);
-    
+    [UINavigationBar appearance].tintColor = YGRGBColor(67, 67, 67);
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: YGRGBColor(67, 67, 67)} forState:UIControlStateSelected];
     
     [UIImageView appearance].contentMode = UIViewContentModeScaleAspectFill;
@@ -51,7 +52,7 @@
     essenceVC.tabBarItem.selectedImage = @"tab_btn_list_select".yg_image;
     UINavigationController *essenceNavi = [[UINavigationController alloc] initWithRootViewController:essenceVC];
     
-    YGListController *listVC = [[YGListController alloc] initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
+    YGListController *listVC = [[YGListController alloc] initWithCollectionViewLayout:[[YGListFlowLayout alloc] init]];
     listVC.title = @"专栏";
     listVC.tabBarItem.image = @"nav_ic_columns_default".yg_image;
     listVC.tabBarItem.selectedImage = @"nav_ic_columns_selected".yg_image;

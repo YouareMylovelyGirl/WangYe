@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A40E178F1E4EA77800CC4BD6 /* YGEssenceWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40E178E1E4EA77800CC4BD6 /* YGEssenceWebController.m */; };
+		A40FD8301E53232F001BA42C /* YGListDetailMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40FD82F1E53232F001BA42C /* YGListDetailMovieController.m */; };
 		A4109E1B1E520A780075208C /* YGListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4109E1A1E520A780075208C /* YGListItem.m */; };
 		A4109E1E1E520A9A0075208C /* YGDetailListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4109E1D1E520A9A0075208C /* YGDetailListItem.m */; };
 		A4109E251E520B460075208C /* YGListDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4109E241E520B460075208C /* YGListDetailController.m */; };
@@ -40,6 +41,8 @@
 		835192F6E01FEDDEA8DF76F8 /* libPods-WangYe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WangYe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40E178D1E4EA77800CC4BD6 /* YGEssenceWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGEssenceWebController.h; sourceTree = "<group>"; };
 		A40E178E1E4EA77800CC4BD6 /* YGEssenceWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGEssenceWebController.m; sourceTree = "<group>"; };
+		A40FD82E1E53232F001BA42C /* YGListDetailMovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGListDetailMovieController.h; sourceTree = "<group>"; };
+		A40FD82F1E53232F001BA42C /* YGListDetailMovieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGListDetailMovieController.m; sourceTree = "<group>"; };
 		A4109E191E520A780075208C /* YGListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGListItem.h; sourceTree = "<group>"; };
 		A4109E1A1E520A780075208C /* YGListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGListItem.m; sourceTree = "<group>"; };
 		A4109E1C1E520A9A0075208C /* YGDetailListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YGDetailListItem.h; path = ../../../Model/YGDetailListItem.h; sourceTree = "<group>"; };
@@ -176,6 +179,8 @@
 		A4109E331E5222850075208C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A40FD82E1E53232F001BA42C /* YGListDetailMovieController.h */,
+				A40FD82F1E53232F001BA42C /* YGListDetailMovieController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -561,6 +566,7 @@
 				A418B2301E4A1A6B0056F14B /* NSObject+Parse.m in Sources */,
 				A418B2421E4A27E30056F14B /* YGTabBarController.m in Sources */,
 				A40E178F1E4EA77800CC4BD6 /* YGEssenceWebController.m in Sources */,
+				A40FD8301E53232F001BA42C /* YGListDetailMovieController.m in Sources */,
 				A41B089F1E4E11D200B0A2EE /* YGEssenceItem.m in Sources */,
 				A46E4FAA1E49E72E000756D9 /* AppDelegate.m in Sources */,
 				A4109E281E520B660075208C /* YGListFlowLayout.m in Sources */,

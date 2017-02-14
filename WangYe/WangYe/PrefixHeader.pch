@@ -33,6 +33,7 @@
 #import "NSObject+Parse.h"
 #import "UIScrollView+Refresh.h"
 #import <UITableView+FDTemplateLayoutCell.h>
+#import <HcdCachePlayer.h>
 
 #import "NetManager.h"
 

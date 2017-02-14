@@ -9,11 +9,15 @@
 #import "YGListDetailController.h"
 #import "YGListDetailCell.h"
 #import "YGDetailListItem.h"
+#import "YGListDetailMovieController.h"
 @interface YGListDetailController ()
 /** 详细页数组 */
 @property(nonatomic, strong) NSMutableArray *detailArr;
 /** 下一页 */
 @property(nonatomic, strong) NSString *nextPage;
+/** 详情模型 */
+@property(nonatomic, strong) YGDetailListItem *detailListItem;
+
 
 @end
 
@@ -23,6 +27,7 @@
 {
     if (self = [super init]) {
         self.listName = listName;
+        self.hidesBottomBarWhenPushed = YES;
     }
     return self;
 }
@@ -45,6 +50,7 @@
             if (error) {
                 [weakSelf.view showMessage:@"网络出现错误, 请重试..."];
             } else {
+                weakSelf.detailListItem = detailItem;
                 [weakSelf.detailArr removeAllObjects];
                 [weakSelf.detailArr addObjectsFromArray:detailItem.videoList];
                 weakSelf.nextPage = detailItem.nextPageUrl;
@@ -106,6 +112,13 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YGDetailListVideolistItem *videoListItem = self.detailArr[indexPath.row];
+    YGListDetailMovieController *movieVC = [[YGListDetailMovieController alloc] initWithBgImageView:videoListItem.coverBlurred titleView:videoListItem.coverForDetail detailLabel:videoListItem.des url:videoListItem.playUrl];
+    
+    [self.navigationController pushViewController:movieVC animated:YES];
+}
 
 /*
  // Override to support conditional editing of the table view.

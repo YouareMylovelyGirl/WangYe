@@ -18,4 +18,5 @@ target 'WangYe' do
     pod 'WMPageController'
     pod 'MWPhotoBrowser'
     pod 'MLTransition'
+    pod 'HcdCachePlayer'
 end

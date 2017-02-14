@@ -995,11 +995,15 @@ typedef enum : NSUInteger {
 #pragma mark - 控制条隐藏
 
 - (void)toolViewHidden {
-    self.toolView.hidden = YES;
-    self.statusBarBgView.hidden = YES;
+    [UIView animateWithDuration:.3 animations:^{
+        self.toolView.hidden = YES;
+        self.statusBarBgView.hidden = YES;
+    }];
     
     if (_isFullScreen) {
-        [[UIApplication sharedApplication] setStatusBarHidden:YES];
+        
+        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+        
     }
     [_hiddenTimer invalidate];
 }

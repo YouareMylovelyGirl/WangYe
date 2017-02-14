@@ -116,7 +116,7 @@
 {
     YGDetailListVideolistItem *videoListItem = self.detailArr[indexPath.row];
     YGListDetailMovieController *movieVC = [[YGListDetailMovieController alloc] initWithBgImageView:videoListItem.coverBlurred titleView:videoListItem.coverForDetail detailLabel:videoListItem.des url:videoListItem.playUrl];
-    
+    movieVC.title = videoListItem.title;
     [self.navigationController pushViewController:movieVC animated:YES];
 }
 

@@ -12,7 +12,7 @@
 {
     //播放器
     HcdCacheVideoPlayer *_play;
-  
+    
 }
 /** 背景 */
 @property(nonatomic, strong) UIImageView *bgView;
@@ -24,7 +24,8 @@
 @property(nonatomic, strong) UILabel *constLabel;
 /** 播放按钮 */
 @property(nonatomic, strong) UIButton *playBtn;
-
+// 计算属性, 屏幕大小
+@property (nonatomic, assign) CGSize screenSize;
 
 @end
 
@@ -104,25 +105,29 @@
 - (void)playMovie
 {
     self.headView.hidden = YES;
-//    self.constLabel.hidden = YES;
-//    self.detailLb.hidden = YES;
+    //    self.constLabel.hidden = YES;
+    //    self.detailLb.hidden = YES;
     //点击后创建播放界面
     _play = [[HcdCacheVideoPlayer alloc] init];
     UIView *videoView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, YGScreenW, YGScreenW * 27 / 32.0)];
+    
     [self.view addSubview:videoView];
     //播放
-    [_play playWithUrl:self.url.yg_URL showView:videoView andSuperView:self.view withCache:NO];
+    [_play playWithUrl:self.url.yg_URL showView:videoView andSuperView:self.view withCache:YES];
     NSLog(@"%@", NSHomeDirectory());
     
     NSLog(@"%f", [HcdCacheVideoPlayer allVideoCacheSize]);
+
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - 声明周期方法
+#pragma mark - 生命周期方法
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -133,16 +138,14 @@
 {
     [super viewWillDisappear:animated];
     [_play stop];
+#warning WAIT TODO:在这里先清除全部缓存
+    [HcdCacheVideoPlayer clearAllVideoCache];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (CGSize)screenSize
+{
+    return [UIScreen mainScreen].bounds.size;
 }
-*/
 
 @end

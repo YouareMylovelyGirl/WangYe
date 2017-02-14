@@ -62,6 +62,10 @@
 }
 
 
+#pragma mark - 关闭设备自动旋转, 然后手动监测设备旋转方向来旋转avplayerView
+-(BOOL)shouldAutorotate{
+    return NO;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -79,3 +83,6 @@
 */
 
 @end
+
+
+

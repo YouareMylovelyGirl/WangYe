@@ -11,6 +11,8 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+/** 屏幕朝向 */
+@property(nonatomic, assign) UIInterfaceOrientationMask oritentationMask;
 
 
 @end

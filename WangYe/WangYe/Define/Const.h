@@ -12,6 +12,7 @@
 //OC语言
 #ifdef __OBJC__
 #ifdef DEBUG
+#import "AppDelegate.h"
 //NSLog调试
 #define NSLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #else
@@ -33,6 +34,9 @@
 
 // 主题背景颜色
 #define YGBgColor YGRGBColor(242, 244, 255)
+
+// AppDelegate
+#define kAppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
 #endif
 
 #endif /* Const_h */

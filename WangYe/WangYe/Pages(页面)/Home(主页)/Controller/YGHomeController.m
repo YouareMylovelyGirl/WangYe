@@ -9,12 +9,7 @@
 #import "YGHomeController.h"
 #import "YGHomeItem.h"
 #import "YGHomeCell.h"
-/**
- *  刚刚修改了栏目的下拉刷新
- 添加了home的model文件夹, view文件夹, 编写了 view model 以及把controller换成了 uiviewcontroller, 而不是tableviewController
- //部分做了修改, 添加了占位视图,
- 回家把pageController做了, 以及研究研究wmPlayer
- */
+
 @interface YGHomeController ()<UITableViewDelegate, UITableViewDataSource>
 /**
  *  tableView
@@ -25,10 +20,27 @@
  */
 @property (nonatomic, assign) NSInteger pageNum;
 @property (nonatomic, strong) NSMutableArray<YGHomeVideosItem *> *homeListArr;
+/** 分页索引值数组 */
+@property(nonatomic, strong) NSArray *pageArr;
+
+
+
 @end
 
 @implementation YGHomeController
 
+#pragma mark - 初始化方法
+- (instancetype)initWithIndexPath:(NSInteger)index
+{
+    self = [super init];
+    if (self) {
+        self.index = index;
+    }
+    return self;
+}
+
+
+#pragma mark - life
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self tableView];
@@ -38,14 +50,17 @@
     self.tableView.rowHeight = 200;
     //去掉TableView的线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    
 }
 
 - (void)configNetManager
 {
+    
     self.pageNum = 1;
     typeof(self) weakSelf = self;
     [self.tableView addHeaderRefresh:^{
-        [NetManager GETHomeItem:@"16" page:1 completionHandler:^(YGHomeItem *homeItem, NSError *error) {
+        [NetManager GETHomeItem:weakSelf.pageArr[weakSelf.index] page:1 completionHandler:^(YGHomeItem *homeItem, NSError *error) {
             [weakSelf.tableView endHeaderRefresh];
             if (error) {
                 [weakSelf.view showMessage:@"网络有误.."];
@@ -64,7 +79,7 @@
     [self.tableView beginHeaderRefresh];
     [self.tableView registerClass:[YGHomeCell class] forCellReuseIdentifier:@"cell"];
     [self.tableView addFooterRefresh:^{
-        [NetManager GETHomeItem:@"16" page:self.pageNum + 1 completionHandler:^(YGHomeItem *homeItem, NSError *error) {
+        [NetManager GETHomeItem:weakSelf.pageArr[weakSelf.index] page:self.pageNum + 1 completionHandler:^(YGHomeItem *homeItem, NSError *error) {
             [weakSelf.tableView endFooterRefresh];
             if (error) {
                 [weakSelf.view showMessage:@"网络有误.."];
@@ -111,7 +126,10 @@
 }
 
 #pragma mark - <UITableViewDataSource>
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
 
+}
 #pragma mark - lazy
 - (UITableView *)tableView {
     if(_tableView == nil) {
@@ -125,11 +143,21 @@
 }
 
 
+
 - (NSMutableArray<YGHomeVideosItem *> *)homeListArr {
     if(_homeListArr == nil) {
         _homeListArr = [[NSMutableArray<YGHomeVideosItem *> alloc] init];
     }
     return _homeListArr;
+}
+
+- (NSArray *)pageArr
+{
+    if (_pageArr == nil) {
+        _pageArr = [[NSArray alloc] init];
+        _pageArr = @[@"16", @"2", @"1", @"4", @"5", @"3", @"23", @"22"];
+    }
+    return _pageArr;
 }
 
 

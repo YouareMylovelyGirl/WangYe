@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface YGHomeController : UIViewController
-
+/** 数组索引值 */
+@property(nonatomic, assign) NSInteger index;
+- (instancetype)initWithIndexPath:(NSInteger)index;
 @end

@@ -73,7 +73,6 @@ static NSString * const reuseIdentifier = @"Cell";
     YGListDetailController *detailVC = [[YGListDetailController alloc] initWithListName:listItem.name];
     detailVC.title = listItem.name;
     [self.navigationController pushViewController:detailVC animated:YES];
-#warning TODO:实现视频播放, 进行跳转
 }
 
 

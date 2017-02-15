@@ -11,6 +11,7 @@
 #import "YGEssenceController.h"
 #import "YGListController.h"
 #import "YGListFlowLayout.h"
+#import "YGPageController.h"
 @interface YGTabBarController ()
 
 @end
@@ -40,11 +41,11 @@
 #pragma mark - 创建所有tabBar子控制器
 - (void)setupAllControllers
 {
-    YGHomeController *homeVC = [[YGHomeController alloc] init];
-    homeVC.title = @"主页";
-    homeVC.tabBarItem.image = @"nav_ic_home_default".yg_image;
-    homeVC.tabBarItem.selectedImage = @"nav_ic_home_selected".yg_image;
-    UINavigationController *homeNavi = [[UINavigationController alloc] initWithRootViewController:homeVC];
+    YGPageController *pageVC = [[YGPageController alloc] init];
+    pageVC.tabBarItem.image = @"nav_ic_home_default".yg_image;
+    pageVC.tabBarItem.selectedImage = @"nav_ic_home_selected".yg_image;
+    pageVC.title = @"主页";
+    UINavigationController *homeNavi = [[UINavigationController alloc] initWithRootViewController:pageVC];
     
     YGEssenceController *essenceVC = [[YGEssenceController alloc] initWithStyle:UITableViewStylePlain];
     essenceVC.title = @"夜读";

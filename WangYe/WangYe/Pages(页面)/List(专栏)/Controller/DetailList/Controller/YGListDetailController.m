@@ -73,6 +73,7 @@
             if (error) {
                 [weakSelf.view showMessage:@"网络出现错误, 请重试..."];
             } else {
+                weakSelf.nextPage = detailItem.nextPageUrl;
                 [weakSelf.detailArr addObjectsFromArray:detailItem.videoList];
                 [weakSelf.tableView reloadData];
                 if (self.nextPage == nil) {
@@ -103,7 +104,7 @@
     YGListDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     YGDetailListVideolistItem *videoListItem = self.detailArr[indexPath.row];
-    [cell.iconIV setImageURL:videoListItem.coverForFeed.yg_URL];
+    [cell.iconIV setImageWithURL:videoListItem.coverForFeed.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
     
     NSString *detailLabel = [NSString stringWithFormat:@"#%@ / %02ld'%02ld\"", videoListItem.category, videoListItem.duration / 60, videoListItem.duration % 60];
     cell.detailLB.text = detailLabel;

@@ -40,4 +40,14 @@
         !completionHandler ?: completionHandler([YGDetailListItem Parse:obj], error);
     }];
 }
+
+
++ (id)GETHomeItem:(NSString *)theme page:(NSInteger)pageNum completionHandler:(void (^)(YGHomeItem *, NSError *))completionHandler
+{
+    NSString *path = [NSString stringWithFormat:@"http://api-vmis.fun.tv/list?app=life&cl=iphone&fudid=8EA4119F368A368A378A378AACFBAFD206BA04EC0FBA03BE0FBC00BE06BE0FBD&pg=%ld&si=0&theme=%@&uc=99&v=1.0.0.0", pageNum, theme];
+    return [self GET:path param:nil completionHandler:^(id obj, NSError *error) {
+        !completionHandler ?: completionHandler([YGHomeItem Parse:obj], error);
+    }];
+}
+
 @end

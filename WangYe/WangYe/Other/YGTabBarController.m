@@ -40,7 +40,7 @@
 #pragma mark - 创建所有tabBar子控制器
 - (void)setupAllControllers
 {
-    YGHomeController *homeVC = [[YGHomeController alloc] initWithStyle:UITableViewStylePlain];
+    YGHomeController *homeVC = [[YGHomeController alloc] init];
     homeVC.title = @"主页";
     homeVC.tabBarItem.image = @"nav_ic_home_default".yg_image;
     homeVC.tabBarItem.selectedImage = @"nav_ic_home_selected".yg_image;

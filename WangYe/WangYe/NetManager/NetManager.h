@@ -11,6 +11,7 @@
 #import "YGListItem.h"
 #import "YGDetailListItem.h"
 #import "YGHomeItem.h"
+#import "YGAgoEssenceItem.h"
 @interface NetManager : BaseNetManager
 //精华页
 + (id)GETEssenceItem:(NSString *)lastKey completionHandler:(void(^)(YGEssenceItem *essences, NSError *error))completionHandler;
@@ -21,6 +22,9 @@
 //栏目详细刷新页
 + (id)GETDetailListOtherPage:(NSString *)path conpletionHandler:(void(^)(YGDetailListItem *detailItem, NSError *error))completionHandler;
 
-//home
+//往
 + (id)GETHomeItemCompletionHandler:(void(^)(YGHomeItem *homeItem, NSError *error))completionHandler;
+
+//往期精选
++ (id)GETAgoEssenceCompletionHandler:(void(^)(YGAgoEssenceItem *agoItem, NSError *error))completionHandler;
 @end

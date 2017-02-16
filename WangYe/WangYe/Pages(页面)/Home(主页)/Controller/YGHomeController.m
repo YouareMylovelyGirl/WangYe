@@ -12,6 +12,7 @@
 #import "YGHomeItem.h"
 #import "YGEssenceWebController.h"
 #import "YGListDetailMovieController.h"
+#import "YGAgoEssenceController.h"
 @interface YGHomeController ()<iCarouselDelegate, iCarouselDataSource>
 //主页数组
 @property (nonatomic, strong) NSArray *homeListArr;
@@ -32,6 +33,10 @@
 @property(nonatomic, strong) iCarousel *ic;
 /** pc */
 @property(nonatomic, strong) UIPageControl *pc;
+
+/** 脚步视图 */
+@property(nonatomic, strong) UIView *footerView;
+
 @end
 
 @implementation YGHomeController
@@ -70,6 +75,8 @@
                 [weakSelf.timer invalidate];
                 if (self.loopArr.count > 0) {
                     weakSelf.tableView.tableHeaderView = weakSelf.headerView;
+                    //添加脚步刷新视图
+                    weakSelf.tableView.tableFooterView = weakSelf.footerView;
                     [weakSelf.ic reloadData];
                     weakSelf.pc.numberOfPages = weakSelf.loopArr.count;
                     //如果第一个数组元素为空才进入到这个方法
@@ -153,6 +160,7 @@
         [self.navigationController pushViewController:movieVC animated:YES];
     }
 }
+
 
 #pragma mark - 高性能计算行高
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -299,6 +307,58 @@
 		_bannersArr = [[NSArray<YGHomeForcusimagelistItem *> alloc] init];
 	}
 	return _bannersArr;
+}
+
+- (UIView *)footerView {
+	if(_footerView == nil) {
+		_footerView = [[UIView alloc] init];
+        _footerView.backgroundColor = [UIColor whiteColor];
+        _footerView.frame = CGRectMake(0, 0, YGScreenW, 44);
+        
+        UIImageView *dateImage = [[UIImageView alloc] init];
+        dateImage.image = [UIImage imageNamed:@"tab_dailyselect_44x44_"];
+        [_footerView addSubview:dateImage];
+        [dateImage mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.offset(10);
+            make.centerY.offset(0);
+            make.size.mas_equalTo(44);
+        }];
+        
+        UILabel *titleLB = [[UILabel alloc] init];
+        titleLB.text = @"往期精选";
+        titleLB.font = [UIFont systemFontOfSize:16];
+        [_footerView addSubview:titleLB];
+        [titleLB mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.offset(0);
+            make.left.mas_equalTo(dateImage.mas_right).offset(10);
+        }];
+        
+        UIImageView *goView = [[UIImageView alloc] init];
+        goView.image = [UIImage imageNamed:@"ICON_up_44x44_"];
+        [_footerView addSubview:goView];
+        [goView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.offset(-20);
+            make.size.mas_equalTo(44);
+            make.centerY.offset(0);
+        }];
+        
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+        
+        [btn setBackgroundColor:[UIColor clearColor]];
+        [_footerView addSubview:btn];
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.offset(0);
+        }];
+        [btn addTarget:self action:@selector(goAgoEssenceBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+	}
+	return _footerView;
+}
+
+#pragma mark - 按钮点击方法 跳转到 往期精华
+- (void)goAgoEssenceBtnClick:(UIButton *)sender
+{
+    YGAgoEssenceController *essenceVC = [[YGAgoEssenceController alloc] init];
+    [self.navigationController pushViewController:essenceVC animated:YES];
 }
 
 @end

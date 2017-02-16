@@ -50,4 +50,12 @@
     }];
 }
 
++ (id)GETAgoEssenceCompletionHandler:(void (^)(YGAgoEssenceItem *, NSError *))completionHandler
+{
+    NSString *path = @"http://www.moviebase.cn/uread/app/recommend/lastDays?platform=1&deviceId=F9864FEA-7A4E-4DAA-AE8E-3ED48E542577&appVersion=1.10.0&versionCode=1104&sysver=ios10.2&channelId=0&resolutionWidth=640&resolutionHeight=1136&deviceModel=iPhone5s";
+    return [self GET:path param:nil completionHandler:^(id obj, NSError *error) {
+        !completionHandler ?: completionHandler([YGAgoEssenceItem Parse:obj], error);
+    }];
+}
+
 @end

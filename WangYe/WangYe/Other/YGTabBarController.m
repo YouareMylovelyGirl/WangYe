@@ -44,17 +44,17 @@
     YGPageController *pageVC = [[YGPageController alloc] init];
     pageVC.tabBarItem.image = @"nav_ic_home_default".yg_image;
     pageVC.tabBarItem.selectedImage = @"nav_ic_home_selected".yg_image;
-    pageVC.title = @"主页";
+    pageVC.title = @"往夜";
     UINavigationController *homeNavi = [[UINavigationController alloc] initWithRootViewController:pageVC];
     
     YGEssenceController *essenceVC = [[YGEssenceController alloc] initWithStyle:UITableViewStylePlain];
-    essenceVC.title = @"夜读";
+    essenceVC.title = @"精选";
     essenceVC.tabBarItem.image = @"tab_btn_list_default".yg_image;
     essenceVC.tabBarItem.selectedImage = @"tab_btn_list_select".yg_image;
     UINavigationController *essenceNavi = [[UINavigationController alloc] initWithRootViewController:essenceVC];
     
     YGListController *listVC = [[YGListController alloc] initWithCollectionViewLayout:[[YGListFlowLayout alloc] init]];
-    listVC.title = @"专栏";
+    listVC.title = @"专题";
     listVC.tabBarItem.image = @"nav_ic_columns_default".yg_image;
     listVC.tabBarItem.selectedImage = @"nav_ic_columns_selected".yg_image;
     UINavigationController *listNavi = [[UINavigationController alloc] initWithRootViewController:listVC];

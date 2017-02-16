@@ -21,6 +21,6 @@
 //栏目详细刷新页
 + (id)GETDetailListOtherPage:(NSString *)path conpletionHandler:(void(^)(YGDetailListItem *detailItem, NSError *error))completionHandler;
 
-//主页面
-+ (id)GETHomeItem:(NSString *)theme page:(NSInteger)pageNum completionHandler:(void(^)(YGHomeItem *homeItem, NSError *error))completionHandler;
+//home
++ (id)GETHomeItemCompletionHandler:(void(^)(YGHomeItem *homeItem, NSError *error))completionHandler;
 @end

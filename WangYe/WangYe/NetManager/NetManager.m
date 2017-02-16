@@ -42,9 +42,9 @@
 }
 
 
-+ (id)GETHomeItem:(NSString *)theme page:(NSInteger)pageNum completionHandler:(void (^)(YGHomeItem *, NSError *))completionHandler
++ (id)GETHomeItemCompletionHandler:(void (^)(YGHomeItem *, NSError *))completionHandler
 {
-    NSString *path = [NSString stringWithFormat:@"http://api-vmis.fun.tv/list?app=life&cl=iphone&fudid=8EA4119F368A368A378A378AACFBAFD206BA04EC0FBA03BE0FBC00BE06BE0FBD&pg=%ld&si=0&theme=%@&uc=99&v=1.0.0.0", pageNum, theme];
+    NSString *path = @"http://www.moviebase.cn/uread/app/recommend/recommend?platform=1&deviceId=F9864FEA-7A4E-4DAA-AE8E-3ED48E542577&appVersion=1.10.0&versionCode=1104&sysver=ios10.2&channelId=0&resolutionWidth=640&resolutionHeight=1136&deviceModel=iPhone5s";
     return [self GET:path param:nil completionHandler:^(id obj, NSError *error) {
         !completionHandler ?: completionHandler([YGHomeItem Parse:obj], error);
     }];

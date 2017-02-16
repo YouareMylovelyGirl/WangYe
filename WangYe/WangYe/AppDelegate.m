@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [NetManager GETHomeItem:@"16" page:1 completionHandler:^(YGHomeItem *homeItem, NSError *error) {
+    [NetManager GETHomeItemCompletionHandler:^(YGHomeItem *homeItem, NSError *error) {
         NSLog(@"");
     }];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];

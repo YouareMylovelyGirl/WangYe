@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4041E731E54A99C00957131 /* YGHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4041E721E54A99C00957131 /* YGHomeController.m */; };
+		A403D0121E55FB5800440402 /* YGHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A403D0111E55FB5800440402 /* YGHomeController.m */; };
 		A4041E761E54A9D700957131 /* YGHomeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4041E751E54A9D700957131 /* YGHomeItem.m */; };
-		A4041E791E54AA0E00957131 /* YGHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4041E781E54AA0E00957131 /* YGHomeCell.m */; };
 		A4041E7C1E54AC7D00957131 /* YGPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4041E7B1E54AC7D00957131 /* YGPageController.m */; };
 		A4041E921E54B99A00957131 /* YGBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4041E911E54B99A00957131 /* YGBaseNavigationController.m */; };
 		A40E178F1E4EA77800CC4BD6 /* YGEssenceWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40E178E1E4EA77800CC4BD6 /* YGEssenceWebController.m */; };
@@ -43,12 +42,10 @@
 
 /* Begin PBXFileReference section */
 		835192F6E01FEDDEA8DF76F8 /* libPods-WangYe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WangYe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4041E711E54A99C00957131 /* YGHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGHomeController.h; sourceTree = "<group>"; };
-		A4041E721E54A99C00957131 /* YGHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGHomeController.m; sourceTree = "<group>"; };
+		A403D0101E55FB5800440402 /* YGHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGHomeController.h; sourceTree = "<group>"; };
+		A403D0111E55FB5800440402 /* YGHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGHomeController.m; sourceTree = "<group>"; };
 		A4041E741E54A9D700957131 /* YGHomeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGHomeItem.h; sourceTree = "<group>"; };
 		A4041E751E54A9D700957131 /* YGHomeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGHomeItem.m; sourceTree = "<group>"; };
-		A4041E771E54AA0E00957131 /* YGHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGHomeCell.h; sourceTree = "<group>"; };
-		A4041E781E54AA0E00957131 /* YGHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGHomeCell.m; sourceTree = "<group>"; };
 		A4041E7A1E54AC7D00957131 /* YGPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGPageController.h; sourceTree = "<group>"; };
 		A4041E7B1E54AC7D00957131 /* YGPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGPageController.m; sourceTree = "<group>"; };
 		A4041E901E54B99A00957131 /* YGBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGBaseNavigationController.h; sourceTree = "<group>"; };
@@ -387,8 +384,8 @@
 		A46E4FC81E49EA7C000756D9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A4041E711E54A99C00957131 /* YGHomeController.h */,
-				A4041E721E54A99C00957131 /* YGHomeController.m */,
+				A403D0101E55FB5800440402 /* YGHomeController.h */,
+				A403D0111E55FB5800440402 /* YGHomeController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -405,8 +402,6 @@
 		A46E4FCA1E49EA7C000756D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A4041E771E54AA0E00957131 /* YGHomeCell.h */,
-				A4041E781E54AA0E00957131 /* YGHomeCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -577,14 +572,12 @@
 			files = (
 				A418B2331E4A1B330056F14B /* UIView+HUD.m in Sources */,
 				A418B23F1E4A23F50056F14B /* NetManager.m in Sources */,
-				A4041E731E54A99C00957131 /* YGHomeController.m in Sources */,
 				A4109E251E520B460075208C /* YGListDetailController.m in Sources */,
 				A418B2391E4A1EB80056F14B /* NSString+YG.m in Sources */,
 				A4109E311E520C5F0075208C /* YGListCell.m in Sources */,
 				A4041E921E54B99A00957131 /* YGBaseNavigationController.m in Sources */,
 				A41B08A21E4E1AAC00B0A2EE /* YGEssenceCommomCell.m in Sources */,
 				A41B08A81E4E20C500B0A2EE /* YGEssenceBigCell.m in Sources */,
-				A4041E791E54AA0E00957131 /* YGHomeCell.m in Sources */,
 				A418B2301E4A1A6B0056F14B /* NSObject+Parse.m in Sources */,
 				A418B2421E4A27E30056F14B /* YGTabBarController.m in Sources */,
 				A40E178F1E4EA77800CC4BD6 /* YGEssenceWebController.m in Sources */,
@@ -602,6 +595,7 @@
 				A418B2361E4A1CFE0056F14B /* UIScrollView+Refresh.m in Sources */,
 				A4041E7C1E54AC7D00957131 /* YGPageController.m in Sources */,
 				A4109E2B1E520B8C0075208C /* YGListDetailCell.m in Sources */,
+				A403D0121E55FB5800440402 /* YGHomeController.m in Sources */,
 				A4109E1E1E520A9A0075208C /* YGDetailListItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

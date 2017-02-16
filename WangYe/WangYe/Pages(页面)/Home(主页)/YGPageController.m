@@ -21,7 +21,10 @@
         self.menuBGColor = YGRGBColor(249, 249, 249);
         
         self.menuViewStyle = WMMenuViewStyleLine;
+        self.menuViewLayoutMode = WMMenuViewLayoutModeCenter;
+        self.titleSizeNormal = 20;
         self.titleSizeSelected = self.titleSizeNormal;
+        
         self.titleColorSelected = self.titleColorNormal;
         self.automaticallyCalculatesItemWidths = YES; //根据题目的内容自动算宽度
         self.itemMargin = 30; //题目的间距
@@ -33,7 +36,7 @@
 
 - (NSArray<NSString *> *)titles
 {
-    return @[@"精选", @"城市", @"美食", @"短片", @"广告", @"Life", @"记录", @"萌宠"];
+    return @[@"往", @"夜"];
 }
 
 
@@ -44,7 +47,7 @@
 
 - (UIViewController *)pageController:(WMPageController *)pageController viewControllerAtIndex:(NSInteger)index
 {
-    YGHomeController *homeVC = [[YGHomeController alloc] initWithIndexPath:index];
+    YGHomeController *homeVC = [[YGHomeController alloc] init];
     return homeVC;
 }
 - (void)viewDidLoad {

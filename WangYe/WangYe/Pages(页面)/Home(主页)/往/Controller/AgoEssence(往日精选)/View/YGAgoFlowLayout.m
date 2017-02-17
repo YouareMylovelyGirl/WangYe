@@ -12,12 +12,12 @@
 - (instancetype)init
 {
     if (self = [super init]) {
-        CGFloat width = YGScreenW;
-        CGFloat height = width + 40;
+        CGFloat width = (long)(YGScreenW - 30) / 2;
+        CGFloat height = width + 70;
         self.itemSize = CGSizeMake(width, height);
-        self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        self.minimumInteritemSpacing = 0;
-        self.minimumLineSpacing = 0;
+        self.minimumInteritemSpacing = 10;
+        self.minimumLineSpacing = 10;
+        self.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
     }
     return self;
 }

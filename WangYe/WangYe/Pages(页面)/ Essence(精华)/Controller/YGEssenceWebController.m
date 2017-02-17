@@ -7,12 +7,11 @@
 //
 
 #import "YGEssenceWebController.h"
-
 @interface YGEssenceWebController ()<UIWebViewDelegate, UIScrollViewDelegate>
 /** webView */
 @property(nonatomic, strong) UIWebView *webView;
 /** 悬浮按钮Window */
-@property(nonatomic, strong) UIWindow *buttonWin;
+@property(nonatomic, strong) UIView *buttonWin;
 /** 悬浮按钮 */
 @property(nonatomic, strong) UIButton *suspendBtn;
 
@@ -40,13 +39,18 @@
     [super viewDidLoad];
     [self configWebView];
     //要等rootwin创建之后再加上这个
-    [self performSelector:@selector(creatSuspendButton) withObject:nil afterDelay:.3];
+    //    [self performSelector:@selector(creatSuspendButton) withObject:nil afterDelay:.3];
+    [self creatSuspendButton];
 }
 
 //配置webView先关信息
 - (void)configWebView
 {
+    
+    
+    
     self.webView = [[UIWebView alloc] init];
+    self.webView.scrollView.delegate = self;
     self.webView.scalesPageToFit = YES;
     self.webView.scrollView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
     [self.view addSubview:self.webView];
@@ -89,16 +93,14 @@
     [self.suspendBtn setBackgroundImage:[UIImage imageNamed:@"homeBackButton"] forState:UIControlStateNormal];
     self.suspendBtn.frame = CGRectMake(0, 0, 54, 54);
     [self.suspendBtn addTarget:self action:@selector(clickSuspendButton) forControlEvents:UIControlEventTouchUpInside];
-    
     //创建悬浮按钮的window
-    self.buttonWin = [[UIWindow alloc] initWithFrame:CGRectMake(25, YGScreenH - 60, 54, 54)];
-    //设置win的等级为最高级
-    self.buttonWin.windowLevel = UIWindowLevelAlert + 1;
+    self.buttonWin = [[UIView alloc] initWithFrame:CGRectMake(25, YGScreenH - 60, 54, 54)];
     self.buttonWin.backgroundColor = [UIColor clearColor];
-    
-    [self.buttonWin addSubview:self.suspendBtn];
     //将buttonWin显示出来
-    [self.buttonWin makeKeyAndVisible];
+    [self.view addSubview:self.buttonWin];
+    [self.buttonWin addSubview:self.suspendBtn];
+    
+    
 }
 //点击悬浮按钮
 - (void)clickSuspendButton
@@ -121,49 +123,32 @@
     self.navigationController.navigationBarHidden = NO;
 }
 //按钮隐藏
-/*
- #pragma mark - <UIScrollViewDelegate>
- - (void)scrollViewDidScroll:(UIScrollView *)scrollView
- {
- 
- //向上滑动
- if (scrollView.contentOffset.y > _offsetY + 60) {
- //按钮消失
- [self hideSuspendButton];
- 
- } else if (scrollView.contentOffset.y < _offsetY) {
- //按钮出现
- [self showSuspendButton];
- }
- }
- #pragma mark - 隐藏按钮
- - (void)hideSuspendButton
- {
- if (self.buttonWin.layer.frame.origin.y == YGScreenH) {
- return;
- }
- [UIView animateWithDuration:.5 animations:^{
- self.suspendBtn.frame = CGRectMake(25, YGScreenH, 54, 54);
- }];
- }
- 
- //停止滚动式调用
- - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
- {
- _offsetY = scrollView.contentOffset.y;
- }
- #pragma mark - 显示按钮
- - (void)showSuspendButton
- {
- if (self.buttonWin.layer.frame.origin.y == YGScreenH) {
- return;
- }
- [UIView animateWithDuration:.5 animations:^{
- CGRect tempFrame = self.suspendBtn.frame;
- tempFrame.origin.y -= 60;
- self.suspendBtn.frame = tempFrame;
- }];
- }
- */
+#pragma mark - <UIScrollViewDelegate>
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    
+    if (scrollView.contentOffset.y > _offsetY + 15) {
+        [self suspensionWithAlpha:0];
+    }
+    else if (scrollView.contentOffset.y < _offsetY)
+    {
+        [self suspensionWithAlpha:1];
+    }
+}
+
+//停止滚动式调用
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    _offsetY = scrollView.contentOffset.y;
+}
+
+//设置悬浮按钮的透明度
+- (void)suspensionWithAlpha:(CGFloat)alpha
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        [self.buttonWin setAlpha:alpha];
+    }];
+}
+
 
 @end

@@ -28,7 +28,6 @@ static NSString * const reuseIdentifier = @"Cell";
     [self collectionView];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    self.collectionView.pagingEnabled = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     [self configNetManager];
     
@@ -69,10 +68,14 @@ static NSString * const reuseIdentifier = @"Cell";
     YGAgoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     YGAgoEssenceInfolistItem *infoItem = self.agoArr[indexPath.row];
     [cell.iconIV setImageWithURL:infoItem.object.imageRecommend.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
+    //设置圆角
+    cell.iconIV.layer.cornerRadius = 5;
     cell.titleLB.text = infoItem.object.title;
     if (infoItem.object.des.length == 0) {
+        cell.detailLB.numberOfLines = 3;
         cell.detailLB.text = infoItem.object.descriptionRecommend;
     } else {
+        cell.detailLB.numberOfLines = 3;
         cell.detailLB.text = infoItem.object.des;
     }
     return cell;
@@ -88,7 +91,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionView *)collectionView {
     if(_collectionView == nil) {
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, YGScreenW, YGScreenW * 3 / 2.0) collectionViewLayout:[[YGAgoFlowLayout alloc] init]];
+        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:[[YGAgoFlowLayout alloc] init]];
         _collectionView.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:_collectionView];
     }

@@ -58,4 +58,12 @@
     }];
 }
 
++ (id)GETCategoryItemCompletionHandler:(void (^)(YGCategoryItem *, NSError *))complteionHandler
+{
+    NSString *path = @"http://www.moviebase.cn/uread/app/category/categoryList?platform=1&deviceId=F9864FEA-7A4E-4DAA-AE8E-3ED48E542577&appVersion=1.10.0&versionCode=1104&sysver=ios10.2&channelId=0&resolutionWidth=640&resolutionHeight=1136&deviceModel=iPhone5s";
+    return [self GET:path param:nil completionHandler:^(id obj, NSError *error) {
+        !complteionHandler ?: complteionHandler([YGCategoryItem Parse:obj], error);
+    }];
+}
+
 @end

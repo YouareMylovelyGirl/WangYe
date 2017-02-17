@@ -358,6 +358,7 @@
 - (void)goAgoEssenceBtnClick:(UIButton *)sender
 {
     YGAgoEssenceController *essenceVC = [[YGAgoEssenceController alloc] init];
+    essenceVC.title = @"往期精选";
     [self.navigationController pushViewController:essenceVC animated:YES];
 }
 

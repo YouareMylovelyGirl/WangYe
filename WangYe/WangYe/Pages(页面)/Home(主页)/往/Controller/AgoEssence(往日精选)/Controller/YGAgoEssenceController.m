@@ -68,14 +68,12 @@ static NSString * const reuseIdentifier = @"Cell";
     YGAgoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     YGAgoEssenceInfolistItem *infoItem = self.agoArr[indexPath.row];
     [cell.iconIV setImageWithURL:infoItem.object.imageRecommend.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
-    //设置圆角
-    cell.iconIV.layer.cornerRadius = 5;
     cell.titleLB.text = infoItem.object.title;
     if (infoItem.object.des.length == 0) {
-        cell.detailLB.numberOfLines = 3;
+        cell.detailLB.numberOfLines = 2;
         cell.detailLB.text = infoItem.object.descriptionRecommend;
     } else {
-        cell.detailLB.numberOfLines = 3;
+        cell.detailLB.numberOfLines = 2;
         cell.detailLB.text = infoItem.object.des;
     }
     return cell;

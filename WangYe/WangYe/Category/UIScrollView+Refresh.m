@@ -10,7 +10,11 @@
 
 @implementation UIScrollView (Refresh)
 - (void)addHeaderRefresh:(void(^)())block{
-    self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:block];
+    //    self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:block];
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:block];
+    self.mj_header = header;
+    header.lastUpdatedTimeLabel.hidden = YES;
+    header.stateLabel.hidden = YES;
 }
 - (void)endHeaderRefresh{
     [self.mj_header endRefreshing];

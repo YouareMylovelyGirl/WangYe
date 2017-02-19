@@ -13,11 +13,12 @@
     if(_iconIV == nil) {
         [self cellSeparator];
         _iconIV = [[UIImageView alloc] init];
+
         //设置
         _iconIV.layer.cornerRadius = 5;
         [self.contentView addSubview:_iconIV];
         [_iconIV mas_makeConstraints:^(MASConstraintMaker *make) {
-            CGFloat scale = 231 / 410.0;
+            CGFloat scale = 9 / 20.0;
             make.top.mas_equalTo(self.titleLB.mas_bottom).offset(10);
             make.left.offset(10);
             make.right.offset(-10);
@@ -60,7 +61,7 @@
         _cellSeparator = [[UIView alloc] init];
         //点击cell没有阴影效果
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
-        _cellSeparator.backgroundColor = YGRGBColor(238, 238, 238);
+        _cellSeparator.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:_cellSeparator];
         [_cellSeparator mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.offset(0);

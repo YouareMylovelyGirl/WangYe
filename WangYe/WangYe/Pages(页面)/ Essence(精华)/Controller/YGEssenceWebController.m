@@ -127,7 +127,7 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     
-    if (scrollView.contentOffset.y > _offsetY + 15) {
+    if (scrollView.contentOffset.y > _offsetY + 1) {
         [self suspensionWithAlpha:0];
     }
     else if (scrollView.contentOffset.y < _offsetY)

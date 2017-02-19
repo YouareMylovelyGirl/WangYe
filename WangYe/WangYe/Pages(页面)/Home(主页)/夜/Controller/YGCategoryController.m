@@ -9,6 +9,8 @@
 #import "YGCategoryController.h"
 #import "YGTopicCell.h"
 #import "YGCategoryItem.h"
+#import "YGAllCategoryController.h"
+#import "YGAllCategoryFlowLayout.h"
 @interface YGCategoryController ()<UICollectionViewDelegateFlowLayout>
 /** topicRecommend */
 @property(nonatomic, strong) NSArray *topicRecommendArr;
@@ -93,6 +95,13 @@
         _footerView = [[UIView alloc] init];
         _footerView.backgroundColor = [UIColor whiteColor];
         _footerView.frame = CGRectMake(0, 0, YGScreenW, 44);
+        _footerView.layer.cornerRadius = 3;
+        /*********/
+        _footerView.layer.shadowColor = [UIColor blackColor].CGColor;//shadowColor阴影颜色
+        _footerView.layer.shadowOffset = CGSizeMake(5,5);//shadowOffset阴影偏移,x向右偏移4，y向下偏移4，默认(0, -3),这个跟shadowRadius配合使用
+        _footerView.layer.shadowOpacity = 0.5;//阴影透明度，默认0
+        _footerView.layer.shadowRadius = 4;//阴影半径，默认3
+        /*********/
         
         UIImageView *dateImage = [[UIImageView alloc] init];
         dateImage.image = [UIImage imageNamed:@"tab_category_46x46_"];
@@ -136,7 +145,10 @@
 #pragma mark - 按钮点击方法 跳转到 往期精华
 - (void)goAgoEssenceBtnClick:(UIButton *)sender
 {
-    
+    YGAllCategoryController *cateVC = [[YGAllCategoryController alloc] initWithCollectionViewLayout:[[YGAllCategoryFlowLayout alloc] init]];
+    //跳转时候隐藏tabBar
+    cateVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:cateVC animated:YES];
 }
 
 

@@ -313,7 +313,16 @@
 	if(_footerView == nil) {
 		_footerView = [[UIView alloc] init];
         _footerView.backgroundColor = [UIColor whiteColor];
-        _footerView.frame = CGRectMake(0, 0, YGScreenW, 44);
+        _footerView.frame = CGRectMake(0, 0, YGScreenW, 64);
+        _footerView.layer.cornerRadius = 3;
+        
+        /*********/
+        _footerView.layer.shadowColor = [UIColor blackColor].CGColor;//shadowColor阴影颜色
+        _footerView.layer.shadowOffset = CGSizeMake(5,5);//shadowOffset阴影偏移,x向右偏移4，y向下偏移4，默认(0, -3),这个跟shadowRadius配合使用
+        _footerView.layer.shadowOpacity = 0.8;//阴影透明度，默认0
+        _footerView.layer.shadowRadius = 4;//阴影半径，默认3
+        /*********/
+        
         
         UIImageView *dateImage = [[UIImageView alloc] init];
         dateImage.image = [UIImage imageNamed:@"tab_dailyselect_44x44_"];
@@ -359,6 +368,8 @@
 {
     YGAgoEssenceController *essenceVC = [[YGAgoEssenceController alloc] init];
     essenceVC.title = @"往期精选";
+    //跳转时候隐藏tabBar
+    essenceVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:essenceVC animated:YES];
 }
 

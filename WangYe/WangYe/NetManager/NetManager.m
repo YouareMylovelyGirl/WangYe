@@ -75,4 +75,13 @@
     }];
 }
 
+
++ (id)GETAllDetailCategory:(NSInteger)page ID:(NSString *)ID completionHandler:(void (^)(YGAllDetailCategoryItem *, NSError *))completionHandler
+{
+    NSString *path = [NSString stringWithFormat:@"http://www.moviebase.cn/uread/app/topic/topicDetail/articleList?topicId=%@&pageContext=%ld&platform=1&deviceId=F9864FEA-7A4E-4DAA-AE8E-3ED48E542577&appVersion=1.10.0&versionCode=1104&sysver=ios10.2&channelId=0&resolutionWidth=640&resolutionHeight=1136&deviceModel=iPhone5s", ID, page];
+    return [self GET:path param:nil completionHandler:^(id obj, NSError *error) {
+        !completionHandler ?: completionHandler([YGAllDetailCategoryItem Parse:obj], error);
+    }];
+}
+
 @end

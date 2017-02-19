@@ -11,6 +11,7 @@
 #import "YGCategoryItem.h"
 #import "YGAllCategoryController.h"
 #import "YGAllCategoryFlowLayout.h"
+#import "YGAllDetailCategoryController.h"
 @interface YGCategoryController ()<UICollectionViewDelegateFlowLayout>
 /** topicRecommend */
 @property(nonatomic, strong) NSArray *topicRecommendArr;
@@ -44,6 +45,8 @@
             if (error) {
                 [weakSelf.view showMessage:@"网络有误"];
             } else {
+                //关闭蒙版
+                [weakSelf.view hideHUD];
                 //添加脚步视图
                 weakSelf.tableView.tableFooterView = weakSelf.footerView;
                 weakSelf.topicRecommendArr = cateItem.topicRecommendList;
@@ -64,7 +67,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - <UITableViewDelegate>
+#pragma mark - <UITableViewDatasource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.topicRecommendArr.count;
@@ -83,6 +86,16 @@
     return cell;
 }
 
+#pragma mark - <UITableViewDelegate>
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YGCategoryTopicrecommendlistItem *topicItem = self.topicRecommendArr[indexPath.row];
+    YGAllDetailCategoryController *detailCateVC = [[YGAllDetailCategoryController alloc] initWithImageName:topicItem.imgUrl labelName:topicItem.title ID:topicItem.ID];
+    [self.navigationController pushViewController:detailCateVC animated:YES];
+}
+
+
+
 //自动计算行高
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -98,9 +111,9 @@
         _footerView.layer.cornerRadius = 3;
         /*********/
         _footerView.layer.shadowColor = [UIColor blackColor].CGColor;//shadowColor阴影颜色
-        _footerView.layer.shadowOffset = CGSizeMake(5,5);//shadowOffset阴影偏移,x向右偏移4，y向下偏移4，默认(0, -3),这个跟shadowRadius配合使用
-        _footerView.layer.shadowOpacity = 0.5;//阴影透明度，默认0
-        _footerView.layer.shadowRadius = 4;//阴影半径，默认3
+        _footerView.layer.shadowOffset = CGSizeMake(0,0);//shadowOffset阴影偏移,x向右偏移4，y向下偏移4，默认(0, -3),这个跟shadowRadius配合使用
+        _footerView.layer.shadowOpacity = 0.6;//阴影透明度，默认0
+        _footerView.layer.shadowRadius = 5;//阴影半径，默认3
         /*********/
         
         UIImageView *dateImage = [[UIImageView alloc] init];

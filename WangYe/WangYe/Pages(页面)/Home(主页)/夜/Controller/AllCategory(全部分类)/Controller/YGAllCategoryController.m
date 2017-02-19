@@ -9,6 +9,7 @@
 #import "YGAllCategoryController.h"
 #import "YGAllCategoryItem.h"
 #import "YGAllcategoryCell.h"
+#import "YGAllDetailCategoryController.h"
 @interface YGAllCategoryController ()
 //全部分类数组
 @property (nonatomic, strong) NSMutableArray *categoryArr;
@@ -23,7 +24,7 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - life
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     [self configNetManager];
     
     //注册UICollectionViewCell
@@ -58,26 +59,24 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView beginHeaderRefresh];
     
     //脚部刷新
-    //判断是否还有下一页
-    if ([weakSelf.hasMorePage isEqualToString:@"1"]) {
-        [self.collectionView addFooterRefresh:^{
-            [NetManager GETAllCategory:self.pageNum + 1 completionHandler:^(YGAllCategoryItem *allCategoryItem, NSError *error) {
-                [weakSelf.collectionView endFooterRefresh];
-                if (error) {
-                    [weakSelf.view showMessage:@"网络有误..."];
-                } else {
-                    weakSelf.hasMorePage = allCategoryItem.canLoadMore;
-                    weakSelf.hasMorePage = allCategoryItem.canLoadMore;
-                    [weakSelf.categoryArr addObjectsFromArray:allCategoryItem.topicList];
-                    [weakSelf.collectionView reloadData];
-                    //                if ([weakSelf.hasMorePage isEqualToString:@"0"]) {
-                    //                    [weakSelf.collectionView endFooterWithNoMore];
-                    //                }
+    [self.collectionView addFooterRefresh:^{
+        [NetManager GETAllCategory:self.pageNum + 1 completionHandler:^(YGAllCategoryItem *allCategoryItem, NSError *error) {
+            [weakSelf.collectionView endFooterRefresh];
+            if (error) {
+                [weakSelf.view showMessage:@"网络有误..."];
+            } else {
+                weakSelf.hasMorePage = allCategoryItem.canLoadMore;
+                weakSelf.hasMorePage = allCategoryItem.canLoadMore;
+                [weakSelf.categoryArr addObjectsFromArray:allCategoryItem.topicList];
+                [weakSelf.collectionView reloadData];
+                if ([weakSelf.hasMorePage isEqualToString:@"0"]) {
+                    [weakSelf.collectionView endFooterWithNoMore];
                 }
-            }];
+            }
         }];
-    }
-
+    }];
+    
+    
     
 }
 
@@ -112,6 +111,12 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 #pragma mark <UICollectionViewDelegate>
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    YGAllCategoryTopiclistItem *topicItem = self.categoryArr[indexPath.row];
+    YGAllDetailCategoryController *detailCateVC = [[YGAllDetailCategoryController alloc] initWithImageName:topicItem.imgUrl labelName:topicItem.title ID:topicItem.ID];
+    [self.navigationController pushViewController:detailCateVC animated:YES];
+}
 
 
 #pragma mark - lazy

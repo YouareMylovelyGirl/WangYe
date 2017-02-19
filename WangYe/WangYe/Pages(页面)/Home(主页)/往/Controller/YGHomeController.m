@@ -142,7 +142,12 @@
     YGEssenceBigCell *cell = [tableView dequeueReusableCellWithIdentifier:@"YGEssenceBigCell" forIndexPath:indexPath];
     [cell.iconIV setImageWithURL:infoListItem.object.coverUrl.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
     cell.titleLB.text = infoListItem.object.title;
-    cell.detailLB.text = infoListItem.object.des;
+    //如果为空就用空字符串代替
+    if (infoListItem.object.des == nil) {
+        cell.detailLB.text = @"";
+    } else {
+        cell.detailLB.text = infoListItem.object.des;
+    }
     return cell;
 }
 
@@ -318,9 +323,9 @@
         
         /*********/
         _footerView.layer.shadowColor = [UIColor blackColor].CGColor;//shadowColor阴影颜色
-        _footerView.layer.shadowOffset = CGSizeMake(5,5);//shadowOffset阴影偏移,x向右偏移4，y向下偏移4，默认(0, -3),这个跟shadowRadius配合使用
-        _footerView.layer.shadowOpacity = 0.8;//阴影透明度，默认0
-        _footerView.layer.shadowRadius = 4;//阴影半径，默认3
+        _footerView.layer.shadowOffset = CGSizeMake(0,0);//shadowOffset阴影偏移,x向右偏移4，y向下偏移4，默认(0, -3),这个跟shadowRadius配合使用
+        _footerView.layer.shadowOpacity = 0.6;//阴影透明度，默认0
+        _footerView.layer.shadowRadius = 5;//阴影半径，默认3
         /*********/
         
         

@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [NetManager GETAgoEssenceCompletionHandler:^(YGAgoEssenceItem *ageItem, NSError *error) {
+    [NetManager GETAllDetailCategory:1 ID:@"f6e9b813c0f24ed09b80738b2e3f7597" completionHandler:^(YGAllDetailCategoryItem *allDetailCategoryItem, NSError *error) {
         NSLog(@"");
     }];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];

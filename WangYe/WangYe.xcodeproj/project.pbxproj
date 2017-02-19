@@ -30,6 +30,8 @@
 		A415C4AA1E59C02000729F82 /* YGAllCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A415C4A91E59C02000729F82 /* YGAllCategoryItem.m */; };
 		A415C4AD1E59C04300729F82 /* YGAllCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A415C4AC1E59C04300729F82 /* YGAllCategoryCell.m */; };
 		A415C4B01E59C05A00729F82 /* YGAllCategoryFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A415C4AF1E59C05A00729F82 /* YGAllCategoryFlowLayout.m */; };
+		A415C4BA1E59D51D00729F82 /* YGAllDetailCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = A415C4B91E59D51D00729F82 /* YGAllDetailCategoryController.m */; };
+		A415C4BD1E59D52E00729F82 /* YGAllDetailCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A415C4BC1E59D52E00729F82 /* YGAllDetailCategoryItem.m */; };
 		A418B2301E4A1A6B0056F14B /* NSObject+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B22F1E4A1A6B0056F14B /* NSObject+Parse.m */; };
 		A418B2331E4A1B330056F14B /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2321E4A1B330056F14B /* UIView+HUD.m */; };
 		A418B2361E4A1CFE0056F14B /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = A418B2351E4A1CFE0056F14B /* UIScrollView+Refresh.m */; };
@@ -48,6 +50,10 @@
 		A46E4FB01E49E72E000756D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46E4FAE1E49E72E000756D9 /* Main.storyboard */; };
 		A46E4FB21E49E72E000756D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46E4FB11E49E72E000756D9 /* Assets.xcassets */; };
 		A46E4FB51E49E72E000756D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46E4FB31E49E72E000756D9 /* LaunchScreen.storyboard */; };
+		A4BA2A641E5A08DD00AA7DF3 /* YGAllDetailTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BA2A631E5A08DD00AA7DF3 /* YGAllDetailTextCell.m */; };
+		A4BA2A671E5A0DFF00AA7DF3 /* YGAllDetailMovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BA2A661E5A0DFF00AA7DF3 /* YGAllDetailMovieCell.m */; };
+		A4BA2A6A1E5A0E1700AA7DF3 /* YGAllDetailPicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BA2A691E5A0E1700AA7DF3 /* YGAllDetailPicCell.m */; };
+		A4BA2A6D1E5A12A100AA7DF3 /* YGAllDetailPhotoBrowerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BA2A6C1E5A12A100AA7DF3 /* YGAllDetailPhotoBrowerController.m */; };
 		EB9D20D09D14BD36668062D1 /* libPods-WangYe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 835192F6E01FEDDEA8DF76F8 /* libPods-WangYe.a */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +105,10 @@
 		A415C4AC1E59C04300729F82 /* YGAllCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGAllCategoryCell.m; sourceTree = "<group>"; };
 		A415C4AE1E59C05A00729F82 /* YGAllCategoryFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGAllCategoryFlowLayout.h; sourceTree = "<group>"; };
 		A415C4AF1E59C05A00729F82 /* YGAllCategoryFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGAllCategoryFlowLayout.m; sourceTree = "<group>"; };
+		A415C4B81E59D51D00729F82 /* YGAllDetailCategoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGAllDetailCategoryController.h; sourceTree = "<group>"; };
+		A415C4B91E59D51D00729F82 /* YGAllDetailCategoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGAllDetailCategoryController.m; sourceTree = "<group>"; };
+		A415C4BB1E59D52E00729F82 /* YGAllDetailCategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGAllDetailCategoryItem.h; sourceTree = "<group>"; };
+		A415C4BC1E59D52E00729F82 /* YGAllDetailCategoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGAllDetailCategoryItem.m; sourceTree = "<group>"; };
 		A418B22E1E4A1A6B0056F14B /* NSObject+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Parse.h"; sourceTree = "<group>"; };
 		A418B22F1E4A1A6B0056F14B /* NSObject+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Parse.m"; sourceTree = "<group>"; };
 		A418B2311E4A1B330056F14B /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
@@ -135,6 +145,14 @@
 		A46E4FB61E49E72E000756D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A46E4FCF1E49EA9E000756D9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		A46E4FD01E49EB0E000756D9 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
+		A4BA2A621E5A08DD00AA7DF3 /* YGAllDetailTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGAllDetailTextCell.h; sourceTree = "<group>"; };
+		A4BA2A631E5A08DD00AA7DF3 /* YGAllDetailTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGAllDetailTextCell.m; sourceTree = "<group>"; };
+		A4BA2A651E5A0DFF00AA7DF3 /* YGAllDetailMovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGAllDetailMovieCell.h; sourceTree = "<group>"; };
+		A4BA2A661E5A0DFF00AA7DF3 /* YGAllDetailMovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGAllDetailMovieCell.m; sourceTree = "<group>"; };
+		A4BA2A681E5A0E1700AA7DF3 /* YGAllDetailPicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGAllDetailPicCell.h; sourceTree = "<group>"; };
+		A4BA2A691E5A0E1700AA7DF3 /* YGAllDetailPicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGAllDetailPicCell.m; sourceTree = "<group>"; };
+		A4BA2A6B1E5A12A100AA7DF3 /* YGAllDetailPhotoBrowerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGAllDetailPhotoBrowerController.h; sourceTree = "<group>"; };
+		A4BA2A6C1E5A12A100AA7DF3 /* YGAllDetailPhotoBrowerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGAllDetailPhotoBrowerController.m; sourceTree = "<group>"; };
 		BA7F1492DCC0FBCA1BAD8BC8 /* Pods-WangYe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WangYe.release.xcconfig"; path = "Pods/Target Support Files/Pods-WangYe/Pods-WangYe.release.xcconfig"; sourceTree = "<group>"; };
 		F7EAA3C71D86B0212CC62309 /* Pods-WangYe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WangYe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WangYe/Pods-WangYe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -369,6 +387,7 @@
 		A415C4A21E59BFA100729F82 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A415C4B11E59CAEF00729F82 /* AllDetailCategory(全部分类详细) */,
 				A415C4A51E59BFDE00729F82 /* YGAllCategoryController.h */,
 				A415C4A61E59BFDE00729F82 /* YGAllCategoryController.m */,
 			);
@@ -391,6 +410,49 @@
 				A415C4AC1E59C04300729F82 /* YGAllCategoryCell.m */,
 				A415C4AE1E59C05A00729F82 /* YGAllCategoryFlowLayout.h */,
 				A415C4AF1E59C05A00729F82 /* YGAllCategoryFlowLayout.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A415C4B11E59CAEF00729F82 /* AllDetailCategory(全部分类详细) */ = {
+			isa = PBXGroup;
+			children = (
+				A415C4B21E59CAEF00729F82 /* Controller */,
+				A415C4B31E59CAEF00729F82 /* Model */,
+				A415C4B41E59CAEF00729F82 /* View */,
+			);
+			path = "AllDetailCategory(全部分类详细)";
+			sourceTree = "<group>";
+		};
+		A415C4B21E59CAEF00729F82 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A415C4B81E59D51D00729F82 /* YGAllDetailCategoryController.h */,
+				A415C4B91E59D51D00729F82 /* YGAllDetailCategoryController.m */,
+				A4BA2A6B1E5A12A100AA7DF3 /* YGAllDetailPhotoBrowerController.h */,
+				A4BA2A6C1E5A12A100AA7DF3 /* YGAllDetailPhotoBrowerController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A415C4B31E59CAEF00729F82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A415C4BB1E59D52E00729F82 /* YGAllDetailCategoryItem.h */,
+				A415C4BC1E59D52E00729F82 /* YGAllDetailCategoryItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A415C4B41E59CAEF00729F82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4BA2A621E5A08DD00AA7DF3 /* YGAllDetailTextCell.h */,
+				A4BA2A631E5A08DD00AA7DF3 /* YGAllDetailTextCell.m */,
+				A4BA2A651E5A0DFF00AA7DF3 /* YGAllDetailMovieCell.h */,
+				A4BA2A661E5A0DFF00AA7DF3 /* YGAllDetailMovieCell.m */,
+				A4BA2A681E5A0E1700AA7DF3 /* YGAllDetailPicCell.h */,
+				A4BA2A691E5A0E1700AA7DF3 /* YGAllDetailPicCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -729,13 +791,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A415C4BA1E59D51D00729F82 /* YGAllDetailCategoryController.m in Sources */,
 				A404468F1E57500D00BDC831 /* YGAgoEssenceController.m in Sources */,
 				A415C4AD1E59C04300729F82 /* YGAllCategoryCell.m in Sources */,
 				A40446941E57500D00BDC831 /* YGHomeItem.m in Sources */,
+				A4BA2A6D1E5A12A100AA7DF3 /* YGAllDetailPhotoBrowerController.m in Sources */,
 				A415C4B01E59C05A00729F82 /* YGAllCategoryFlowLayout.m in Sources */,
 				A40446931E57500D00BDC831 /* YGHomeController.m in Sources */,
 				A40446911E57500D00BDC831 /* YGAgoCell.m in Sources */,
 				A418B2331E4A1B330056F14B /* UIView+HUD.m in Sources */,
+				A4BA2A641E5A08DD00AA7DF3 /* YGAllDetailTextCell.m in Sources */,
 				A415C4A71E59BFDE00729F82 /* YGAllCategoryController.m in Sources */,
 				A418B23F1E4A23F50056F14B /* NetManager.m in Sources */,
 				A4109E251E520B460075208C /* YGListDetailController.m in Sources */,
@@ -751,14 +816,17 @@
 				A40E178F1E4EA77800CC4BD6 /* YGEssenceWebController.m in Sources */,
 				A40FD8301E53232F001BA42C /* YGListDetailMovieController.m in Sources */,
 				A40446B01E576DFD00BDC831 /* YGTopicFlowlayout.m in Sources */,
+				A4BA2A6A1E5A0E1700AA7DF3 /* YGAllDetailPicCell.m in Sources */,
 				A41B089F1E4E11D200B0A2EE /* YGEssenceItem.m in Sources */,
 				A46E4FAA1E49E72E000756D9 /* AppDelegate.m in Sources */,
 				A4109E281E520B660075208C /* YGListFlowLayout.m in Sources */,
 				A46E4FA71E49E72E000756D9 /* main.m in Sources */,
 				A4109E1B1E520A780075208C /* YGListItem.m in Sources */,
 				A418B23C1E4A22410056F14B /* BaseNetManager.m in Sources */,
+				A415C4BD1E59D52E00729F82 /* YGAllDetailCategoryItem.m in Sources */,
 				A40446A11E57508C00BDC831 /* YGTopicCell.m in Sources */,
 				A418B2541E4A28C30056F14B /* YGListController.m in Sources */,
+				A4BA2A671E5A0DFF00AA7DF3 /* YGAllDetailMovieCell.m in Sources */,
 				A404469E1E57506900BDC831 /* YGCategoryItem.m in Sources */,
 				A404469B1E57504B00BDC831 /* YGCategoryController.m in Sources */,
 				A41B08A51E4E1F7F00B0A2EE /* YGEssenceImageCell.m in Sources */,

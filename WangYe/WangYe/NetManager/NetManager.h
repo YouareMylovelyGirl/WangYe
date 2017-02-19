@@ -14,6 +14,7 @@
 #import "YGAgoEssenceItem.h"
 #import "YGCategoryItem.h"
 #import "YGAllCategoryItem.h"
+#import "YGAllDetailCategoryItem.h"
 @interface NetManager : BaseNetManager
 //精华页
 + (id)GETEssenceItem:(NSString *)lastKey completionHandler:(void(^)(YGEssenceItem *essences, NSError *error))completionHandler;
@@ -35,4 +36,7 @@
 
 //夜 全部分类
 + (id)GETAllCategory:(NSInteger)page completionHandler:(void(^)(YGAllCategoryItem *allCategoryItem, NSError *error))completionHandler;
+
+//夜 全部分类 全部分类
++ (id)GETAllDetailCategory:(NSInteger)page ID:(NSString *)ID completionHandler:(void(^)(YGAllDetailCategoryItem *allDetailCategoryItem, NSError *error))completionHandler;
 @end

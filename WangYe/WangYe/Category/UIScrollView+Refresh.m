@@ -15,6 +15,8 @@
     self.mj_header = header;
     header.lastUpdatedTimeLabel.hidden = YES;
     header.stateLabel.hidden = YES;
+    //自动更改透明度, 初始值为alpha 0
+    header.automaticallyChangeAlpha = YES;
 }
 - (void)endHeaderRefresh{
     [self.mj_header endRefreshing];

@@ -51,6 +51,7 @@
     
     self.webView = [[UIWebView alloc] init];
     self.webView.scrollView.delegate = self;
+    self.webView.delegate = self;
     self.webView.scalesPageToFit = YES;
     self.webView.scrollView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
     [self.view addSubview:self.webView];
@@ -81,9 +82,9 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    [self.view showMessage:@"网络错误啦~请检查网络"];
-    [NSThread sleepForTimeInterval:1.2];
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.view showMessage:@"请稍后.."];
+//    [NSThread sleepForTimeInterval:1.2];
+//    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - 创建悬浮按钮

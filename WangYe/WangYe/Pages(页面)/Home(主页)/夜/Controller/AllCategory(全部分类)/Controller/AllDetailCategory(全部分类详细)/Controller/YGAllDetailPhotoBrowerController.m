@@ -17,11 +17,12 @@
 @implementation YGAllDetailPhotoBrowerController
 
 #pragma mark - 构造方法
-- (instancetype)initWithImgUrl:(NSString *)imgUrl
+- (instancetype)initWithImgUrl:(NSString *)imgUrl desLB:(NSString *)desLB
 {
     self = [super initWithDelegate:self];
     if (self) {
         self.imgUrl = imgUrl;
+        self.desLB = desLB;
     }
     return self;
 }
@@ -29,6 +30,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.photo = [MWPhoto photoWithURL:self.imgUrl.yg_URL];
+    //图片的详细解释
+    self.photo.caption = self.desLB;
+    [self reloadData];
 }
 
 - (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser{

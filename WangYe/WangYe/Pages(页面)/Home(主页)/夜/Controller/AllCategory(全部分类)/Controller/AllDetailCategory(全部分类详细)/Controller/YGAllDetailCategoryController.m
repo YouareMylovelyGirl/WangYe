@@ -13,6 +13,8 @@
 #import "YGAllDetailCategoryItem.h"
 #import "YGAllDetailPhotoBrowerController.h"
 #import "YGListDetailMovieController.h"
+#import "YGEssenceWebController.h"
+#import "YGListDetailMovieController.h"
 @interface YGAllDetailCategoryController ()<UITableViewDelegate, UITableViewDataSource>
 /** 图片视图 */
 @property(nonatomic, strong) UIImageView *iconIV;
@@ -58,11 +60,9 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    
+    [self configUI];
     
     [self configNetManager];
-    
-    [self configUI];
     
     //注册TableViewCell
     [self.tableView registerClass:[YGAllDetailPicCell class] forCellReuseIdentifier:@"YGAllDetailPicCell"];
@@ -72,15 +72,13 @@
 #pragma mark - 网络请求
 - (void)configNetManager
 {
-    typeof(self) weakSelf = self;
+    __weak typeof(self) weakSelf = self;
     
     [NetManager GETAllDetailCategory:1 ID:self.ID completionHandler:^(YGAllDetailCategoryItem *allDetailCategoryItem, NSError *error) {
         if (error) {
             [self.view showMessage:@"网络有误..."];
         } else {
             [self.tableView endHeaderRefresh];
-            //停止蒙版
-            [self.view hideHUD];
             self.pageNum = 1;
             self.canLoadMore = allDetailCategoryItem.canLoadMore;
             [self.detailCategoryArr addObjectsFromArray:allDetailCategoryItem.articleList];
@@ -90,9 +88,10 @@
             }
         }
     }];
-#warning 为什么不进入这个方法, 不能够下拉刷新
+    
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         [NetManager GETAllDetailCategory:self.pageNum + 1 ID:weakSelf.ID completionHandler:^(YGAllDetailCategoryItem *allDetailCategoryItem, NSError *error) {
+            [self.tableView endFooterRefresh];
             if (error) {
                 [weakSelf.view showMessage:@"网络有误..."];
             } else
@@ -252,6 +251,37 @@
     return picCell;
 }
 
+#pragma mark - <UITableViewDdelegate>
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YGAllDetailCategoryArticlelistItem *articleItem = self.detailCategoryArr[indexPath.row];
+    /**
+     *  新闻分类
+     */
+    if ([articleItem.objectType isEqualToString:@"1"]) {
+        YGEssenceWebController *webVC = [[YGEssenceWebController alloc] initWithAppView:articleItem.object.articleContentUrl];
+        NSLog(@"%@", articleItem.object.articleContentUrl);
+        [self.navigationController pushViewController:webVC animated:YES];
+    }
+    
+    /**
+     *  电影分类
+     */
+    if ([articleItem.objectType isEqualToString:@"2"]) {
+        NSString *bgImage = @"http://img.kaiyanapp.com/65b83a4433a6a0db122cb3e1d7ff6076.jpeg?imageMogr2/quality/60/format/jpg";
+        YGListDetailMovieController *movieVC = [[YGListDetailMovieController alloc] initWithBgImageView:bgImage titleView:articleItem.object.coverUrl detailLabel:articleItem.object.title url:articleItem.object.videoUrl];
+        
+        [self.navigationController pushViewController:movieVC animated:YES];
+    }
+    
+    /**
+     *  图片分类
+     */
+    if ([articleItem.objectType isEqualToString:@"6"]) {
+        YGAllDetailPhotoBrowerController *phtotVC = [[YGAllDetailPhotoBrowerController alloc] initWithImgUrl:articleItem.object.imgUrl desLB:articleItem.object.des];
+        [self.navigationController pushViewController:phtotVC animated:YES];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -264,8 +294,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    //启动蒙版
-    [self.view showHUD];
     //去掉TableView的线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     //是否隐藏导航栏

@@ -76,6 +76,9 @@
 
 @property(nonatomic, strong) NSString *coverUrl;
 
+@property(nonatomic, strong) NSString *videoUrl;
+
+
 
 
 @end

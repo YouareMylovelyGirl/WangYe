@@ -53,7 +53,7 @@
 
 - (void)configNetManager
 {
-    typeof(self) weakSelf = self;
+    __weak typeof(self) weakSelf = self;
     [self.tableView addHeaderRefresh:^{
         [NetManager GETHomeItemCompletionHandler:^(YGHomeItem *homeItem, NSError *error) {
             [weakSelf.tableView endHeaderRefresh];
@@ -323,7 +323,7 @@
         
         /*********/
         _footerView.layer.shadowColor = [UIColor blackColor].CGColor;//shadowColor阴影颜色
-        _footerView.layer.shadowOffset = CGSizeMake(0,0);//shadowOffset阴影偏移,x向右偏移4，y向下偏移4，默认(0, -3),这个跟shadowRadius配合使用
+        _footerView.layer.shadowOffset = CGSizeMake(0,0);
         _footerView.layer.shadowOpacity = 0.6;//阴影透明度，默认0
         _footerView.layer.shadowRadius = 5;//阴影半径，默认3
         /*********/
@@ -335,7 +335,7 @@
         [dateImage mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.offset(10);
             make.centerY.offset(0);
-            make.size.mas_equalTo(44);
+            make.size.mas_equalTo(54);
         }];
         
         UILabel *titleLB = [[UILabel alloc] init];

@@ -35,7 +35,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)configNetManager
 {
     self.pageNum = 1;
-    typeof(self) weakSelf = self;
+    __weak typeof(self) weakSelf = self;
     
     //头部刷新
     [self.collectionView addHeaderRefresh:^{

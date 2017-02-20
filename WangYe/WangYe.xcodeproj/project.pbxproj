@@ -18,6 +18,7 @@
 		A404469E1E57506900BDC831 /* YGCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A404469D1E57506900BDC831 /* YGCategoryItem.m */; };
 		A40446A11E57508C00BDC831 /* YGTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A40446A01E57508C00BDC831 /* YGTopicCell.m */; };
 		A40446B01E576DFD00BDC831 /* YGTopicFlowlayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A40446AF1E576DFD00BDC831 /* YGTopicFlowlayout.m */; };
+		A4060AA31E5B116D00D14D26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4060AA21E5B116D00D14D26 /* Assets.xcassets */; };
 		A40E178F1E4EA77800CC4BD6 /* YGEssenceWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40E178E1E4EA77800CC4BD6 /* YGEssenceWebController.m */; };
 		A40FD8301E53232F001BA42C /* YGListDetailMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40FD82F1E53232F001BA42C /* YGListDetailMovieController.m */; };
 		A4109E1B1E520A780075208C /* YGListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4109E1A1E520A780075208C /* YGListItem.m */; };
@@ -48,7 +49,6 @@
 		A46E4FA71E49E72E000756D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E4FA61E49E72E000756D9 /* main.m */; };
 		A46E4FAA1E49E72E000756D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E4FA91E49E72E000756D9 /* AppDelegate.m */; };
 		A46E4FB01E49E72E000756D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46E4FAE1E49E72E000756D9 /* Main.storyboard */; };
-		A46E4FB21E49E72E000756D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46E4FB11E49E72E000756D9 /* Assets.xcassets */; };
 		A46E4FB51E49E72E000756D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46E4FB31E49E72E000756D9 /* LaunchScreen.storyboard */; };
 		A4BA2A641E5A08DD00AA7DF3 /* YGAllDetailTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BA2A631E5A08DD00AA7DF3 /* YGAllDetailTextCell.m */; };
 		A4BA2A671E5A0DFF00AA7DF3 /* YGAllDetailMovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BA2A661E5A0DFF00AA7DF3 /* YGAllDetailMovieCell.m */; };
@@ -81,6 +81,7 @@
 		A40446A01E57508C00BDC831 /* YGTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGTopicCell.m; sourceTree = "<group>"; };
 		A40446AE1E576DFD00BDC831 /* YGTopicFlowlayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGTopicFlowlayout.h; sourceTree = "<group>"; };
 		A40446AF1E576DFD00BDC831 /* YGTopicFlowlayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGTopicFlowlayout.m; sourceTree = "<group>"; };
+		A4060AA21E5B116D00D14D26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A40E178D1E4EA77800CC4BD6 /* YGEssenceWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGEssenceWebController.h; sourceTree = "<group>"; };
 		A40E178E1E4EA77800CC4BD6 /* YGEssenceWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGEssenceWebController.m; sourceTree = "<group>"; };
 		A40FD82E1E53232F001BA42C /* YGListDetailMovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGListDetailMovieController.h; sourceTree = "<group>"; };
@@ -140,7 +141,6 @@
 		A46E4FA81E49E72E000756D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A46E4FA91E49E72E000756D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A46E4FAF1E49E72E000756D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A46E4FB11E49E72E000756D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		A46E4FB41E49E72E000756D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A46E4FB61E49E72E000756D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A46E4FCF1E49EA9E000756D9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -299,6 +299,16 @@
 				A40446AF1E576DFD00BDC831 /* YGTopicFlowlayout.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A4060AA11E5B116D00D14D26 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				A46E4FAE1E49E72E000756D9 /* Main.storyboard */,
+				A46E4FB31E49E72E000756D9 /* LaunchScreen.storyboard */,
+				A4060AA21E5B116D00D14D26 /* Assets.xcassets */,
+			);
+			path = Resourse;
 			sourceTree = "<group>";
 		};
 		A4109E1F1E520B170075208C /* DetailList(列表详情) */ = {
@@ -484,7 +494,7 @@
 				A46E4FBC1E49E9D2000756D9 /* Category */,
 				A46E4FBD1E49E9D2000756D9 /* Define */,
 				A46E4FBE1E49E9D2000756D9 /* NetManager */,
-				A46E4FC01E49E9D2000756D9 /* Resourse */,
+				A4060AA11E5B116D00D14D26 /* Resourse */,
 				A46E4FC11E49E9D2000756D9 /* Vendor */,
 				A46E4FA51E49E72E000756D9 /* Supporting Files */,
 			);
@@ -544,16 +554,6 @@
 				A46E4FCB1E49EA7C000756D9 /* List(专栏) */,
 			);
 			path = "Pages(页面)";
-			sourceTree = "<group>";
-		};
-		A46E4FC01E49E9D2000756D9 /* Resourse */ = {
-			isa = PBXGroup;
-			children = (
-				A46E4FAE1E49E72E000756D9 /* Main.storyboard */,
-				A46E4FB11E49E72E000756D9 /* Assets.xcassets */,
-				A46E4FB31E49E72E000756D9 /* LaunchScreen.storyboard */,
-			);
-			path = Resourse;
 			sourceTree = "<group>";
 		};
 		A46E4FC11E49E9D2000756D9 /* Vendor */ = {
@@ -731,7 +731,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A46E4FB51E49E72E000756D9 /* LaunchScreen.storyboard in Resources */,
-				A46E4FB21E49E72E000756D9 /* Assets.xcassets in Resources */,
+				A4060AA31E5B116D00D14D26 /* Assets.xcassets in Resources */,
 				A46E4FB01E49E72E000756D9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

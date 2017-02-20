@@ -43,7 +43,7 @@
 
 - (void)configNetManager
 {
-    typeof(self) weakSelf = self;
+    __weak typeof(self) weakSelf = self;
     [self.tableView addHeaderRefresh:^{
         [NetManager GETDetailListItem:weakSelf.listName completionHandler:^(YGDetailListItem *detailItem, NSError *error) {
             [weakSelf.tableView endHeaderRefresh];

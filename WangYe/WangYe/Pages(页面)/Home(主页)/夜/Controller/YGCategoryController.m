@@ -38,7 +38,7 @@
 #pragma mark - netmanager
 - (void)configNetManager
 {
-    typeof(self) weakSelf = self;
+    __weak typeof(self) weakSelf = self;
     [self.tableView addHeaderRefresh:^{
         [NetManager GETCategoryItemCompletionHandler:^(YGCategoryItem *cateItem, NSError *error) {
             [weakSelf.tableView endHeaderRefresh];
@@ -122,7 +122,7 @@
         [dateImage mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.offset(10);
             make.centerY.offset(0);
-            make.size.mas_equalTo(44);
+            make.size.mas_equalTo(54);
         }];
         
         UILabel *titleLB = [[UILabel alloc] init];

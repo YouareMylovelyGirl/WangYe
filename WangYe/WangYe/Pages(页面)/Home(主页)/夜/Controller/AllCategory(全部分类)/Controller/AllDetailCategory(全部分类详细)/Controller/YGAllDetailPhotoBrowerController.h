@@ -11,6 +11,9 @@
 @interface YGAllDetailPhotoBrowerController : MWPhotoBrowser
 /** 图片网址 */
 @property(nonatomic, strong) NSString *imgUrl;
-- (instancetype)initWithImgUrl:(NSString *)imgUrl;
+- (instancetype)initWithImgUrl:(NSString *)imgUrl desLB:(NSString *)desLB;
+
+/** 标题注释 */
+@property(nonatomic, strong) NSString *desLB;
 
 @end

@@ -1,10 +1,6 @@
 # 往夜 -- 原来世界如此性感
 ![头像](http://olptnowq8.bkt.clouddn.com/%E5%9B%BE%E6%A0%87.png)
 
-
-![往夜预览](http://olptnowq8.bkt.clouddn.com/%E5%BE%80%E5%A4%9C%E9%A2%84%E8%A7%88.gif)
-
-
 ---
 
 ##项目简介
@@ -428,8 +424,6 @@
 
 @end
 ```
-- 视频展示
-![往夜视频](http://olptnowq8.bkt.clouddn.com/%E5%BE%80%E5%A4%9C%E8%A7%86%E9%A2%91.gif)
 
 ###2017年2月16日
 - 开始往夜模块编写
@@ -460,13 +454,8 @@
 - 点入”更多专题“为UICollectionViewController
 - 点入专题详细列表， 表头为拉伸图片， 下面是tableview 
 
-![往夜资讯 更过栏目](http://olptnowq8.bkt.clouddn.com/%E5%BE%80%E5%A4%9C%E8%B5%84%E8%AE%AF%20%E6%9B%B4%E8%BF%87%E6%A0%8F%E7%9B%AE.gif)
-
-
 - 更多专题中有显示图片的专题
     - 我用的是`MWPhotoBrowser` 这个框架
-![往夜资讯 栏目图片](http://olptnowq8.bkt.clouddn.com/%E5%BE%80%E5%A4%9C%E8%B5%84%E8%AE%AF%20%E6%A0%8F%E7%9B%AE%E5%9B%BE%E7%89%87.gif)
-
 
 ###2017年2月20日
 ![Snip20170221_16](http://olptnowq8.bkt.clouddn.com/Snip20170221_16.png)
@@ -597,12 +586,9 @@
 
 ---
 #### YG -- 阳光
-##### 业余时间的作品，每天晚上11点开始码代码，平均凌晨4点左右结束，早上9点还要忙自己的事情。
+##### 详细介绍请移步博客园。[博客园地址](http://www.cnblogs.com/Dog-Ping/)
 ##### 如果觉得写得还不错请给予一颗小⭐️⭐️
 
-[GitHub地址](https://github.com/YouareMylovelyGirl)
-[博客园地址](http://www.cnblogs.com/Dog-Ping/)
-[往夜 项目地址](https://github.com/YouareMylovelyGirl/WangYe)
 
 
 

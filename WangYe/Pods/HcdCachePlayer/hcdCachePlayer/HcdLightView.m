@@ -124,7 +124,7 @@
                         change:(NSDictionary *)change
                        context:(void *)context {
     CGRect frame = self.frame;
-    NSLog(@"%f %f", frame.origin.x, frame.origin.y);
+
     CGFloat sound = [change[@"new"] floatValue];
     [self appearSoundView];
     [self updateLongView:sound];

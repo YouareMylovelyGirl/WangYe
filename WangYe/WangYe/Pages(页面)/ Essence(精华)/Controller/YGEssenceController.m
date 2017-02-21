@@ -122,7 +122,6 @@ static NSString * const reuseIdentifier = @"Cell";
             } else {
                 weakSelf.essenceItem = essences;
                 weakSelf.lastKey = essences.response.last_key;
-                NSLog(@"%@", weakSelf.lastKey);
                 [weakSelf.essenceArr addObjectsFromArray:essences.response.feeds];
                 [weakSelf.tableView reloadData];
                 

@@ -260,7 +260,7 @@
      */
     if ([articleItem.objectType isEqualToString:@"1"]) {
         YGEssenceWebController *webVC = [[YGEssenceWebController alloc] initWithAppView:articleItem.object.articleContentUrl];
-        NSLog(@"%@", articleItem.object.articleContentUrl);
+//        NSLog(@"%@", articleItem.object.articleContentUrl);
         [self.navigationController pushViewController:webVC animated:YES];
     }
     

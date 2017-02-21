@@ -27,7 +27,7 @@
     return _titleLB;
 }
 
-- (UIImageView *)iconIV {
+- (YYAnimatedImageView *)iconIV {
     if(_iconIV == nil) {
         //调用视图
         [self cellSeparator];
@@ -35,9 +35,9 @@
         [self.contentView addSubview:_iconIV];
         [_iconIV mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.right.offset(0);
-            CGFloat scale = 64 / 38.0;
+            CGFloat scale = 38 / 64.0;
             make.width.mas_equalTo(YGScreenW / 2.0);
-            make.width.mas_equalTo(_iconIV.mas_height).multipliedBy(scale);
+            make.height.mas_equalTo(_iconIV.mas_width).multipliedBy(scale);
         }];
     }
     return _iconIV;

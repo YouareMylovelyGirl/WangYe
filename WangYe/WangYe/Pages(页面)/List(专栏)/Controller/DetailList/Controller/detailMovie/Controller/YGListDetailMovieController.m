@@ -114,9 +114,8 @@
     [self.view addSubview:videoView];
     //播放
     [_play playWithUrl:self.url.yg_URL showView:videoView andSuperView:self.view withCache:YES];
-    NSLog(@"%@", NSHomeDirectory());
     
-    NSLog(@"%f", [HcdCacheVideoPlayer allVideoCacheSize]);
+//    NSLog(@"%f", [HcdCacheVideoPlayer allVideoCacheSize]);
 
     
 }

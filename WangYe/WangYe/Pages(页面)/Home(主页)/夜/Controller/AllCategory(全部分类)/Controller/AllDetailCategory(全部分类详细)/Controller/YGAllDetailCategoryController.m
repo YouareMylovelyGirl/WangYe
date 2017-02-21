@@ -347,39 +347,43 @@
 }
 
 #pragma mark - 高性能计算行高
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    YGAllDetailCategoryArticlelistItem *articleItem = self.detailCategoryArr[indexPath.row];
-    
-    if ([articleItem.objectType isEqualToString:@"1"]) {
-        return [tableView fd_heightForCellWithIdentifier:@"YGAllDetailTextCell" configuration:^(YGAllDetailTextCell *cell) {
-            
-            [cell.iconIV setImageWithURL:articleItem.object.imgUrl.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
-        }];
-    }
-    
-    if ([articleItem.objectType isEqualToString:@"2"]) {
-        return [tableView fd_heightForCellWithIdentifier:@"YGAllDetailMovieCell" configuration:^(YGAllDetailMovieCell *cell) {
-            [cell.iconIV setImageWithURL:articleItem.object.coverUrl.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
-            cell.titleLB.text = articleItem.object.title;
-            //如果为空就用空字符串代替
-            if (articleItem.object.des == nil) {
-                cell.detailLB.text = @"";
-            } else {
-                cell.detailLB.text = articleItem.object.des;
-            }
-        }];
-    }
-    
-    return [tableView fd_heightForCellWithIdentifier:@"YGAllDetailPicCell" configuration:^(YGAllDetailPicCell *cell) {
-        [cell.iconIV setImageWithURL:articleItem.object.imgUrl.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
-        cell.titleLB.text = articleItem.object.des;
-        cell.detailLB.text = [NSString stringWithFormat:@"《%@》", articleItem.object.sourceAuthor];
-    }];
-    
-    
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    YGAllDetailCategoryArticlelistItem *articleItem = self.detailCategoryArr[indexPath.row];
+//    
+//    if ([articleItem.objectType isEqualToString:@"1"]) {
+//        return [tableView fd_heightForCellWithIdentifier:@"YGAllDetailTextCell" configuration:^(YGAllDetailTextCell *cell) {
+//            
+//            [cell.iconIV setImageWithURL:articleItem.object.imgUrl.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
+//        }];
+//    }
+//    
+//    if ([articleItem.objectType isEqualToString:@"2"]) {
+//        return [tableView fd_heightForCellWithIdentifier:@"YGAllDetailMovieCell" configuration:^(YGAllDetailMovieCell *cell) {
+//            [cell.iconIV setImageWithURL:articleItem.object.coverUrl.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
+//            cell.titleLB.text = articleItem.object.title;
+//            //如果为空就用空字符串代替
+//            if (articleItem.object.des == nil) {
+//                cell.detailLB.text = @"";
+//            } else {
+//                cell.detailLB.text = articleItem.object.des;
+//            }
+//        }];
+//    }
+//    
+//    return [tableView fd_heightForCellWithIdentifier:@"YGAllDetailPicCell" configuration:^(YGAllDetailPicCell *cell) {
+//        [cell.iconIV setImageWithURL:articleItem.object.imgUrl.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
+//        cell.titleLB.text = articleItem.object.des;
+//        cell.detailLB.text = [NSString stringWithFormat:@"《%@》", articleItem.object.sourceAuthor];
+//    }];
+//    
+//    
+//}
 
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewAutomaticDimension;
+}
 
 #pragma mark - lazy
 - (NSMutableArray *)detailCategoryArr {

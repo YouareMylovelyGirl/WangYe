@@ -17,10 +17,10 @@
     return [manager GET:path parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@", task.currentRequest.URL.absoluteString);
+//        NSLog(@"%@", task.currentRequest.URL.absoluteString);
         !completionHandler ?: completionHandler(responseObject, nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@", error);
+//        NSLog(@"%@", error);
     }];
 }
 
@@ -33,10 +33,10 @@
     return [manager POST:path parameters:param progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@", task.currentRequest.URL.absoluteString);
+//        NSLog(@"%@", task.currentRequest.URL.absoluteString);
         !completionHandler ?: completionHandler(responseObject, nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@", error);
+//        NSLog(@"%@", error);
         !completionHandler ?: completionHandler(nil, error);
     }];
 }

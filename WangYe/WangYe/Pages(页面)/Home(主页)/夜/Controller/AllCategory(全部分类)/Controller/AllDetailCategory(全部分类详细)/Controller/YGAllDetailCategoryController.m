@@ -142,9 +142,7 @@
     self.iconIV.clipsToBounds = YES;
     [self.iconIV setImageWithURL:self.imageName.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
     [self.headView addSubview:self.iconIV];
-    [self.iconIV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.offset(0);
-    }];
+    self.iconIV.frame = self.headView.frame;
     
     
     /**
@@ -326,10 +324,16 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat scale = 365 / 750.0;
+    
     CGPoint p = scrollView.contentOffset;
-    [self.iconIV mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.top.offset(p.y);
-    }];
+    if (p.y >= 0) { //这里向上移动图片不变小
+        self.iconIV.frame = CGRectMake(0, 0, YGScreenW, YGScreenW * scale);
+        return;
+    }
+    CGRect frame = self.headView.frame;
+    frame.size.height = YGScreenW * scale - p.y;
+    frame.origin.y = p.y;
+    self.iconIV.frame = frame;
     
     if (p.y >= YGScreenW * scale - 64) {
         self.TopNavView.hidden = NO;
@@ -347,43 +351,40 @@
 }
 
 #pragma mark - 高性能计算行高
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    YGAllDetailCategoryArticlelistItem *articleItem = self.detailCategoryArr[indexPath.row];
-//    
-//    if ([articleItem.objectType isEqualToString:@"1"]) {
-//        return [tableView fd_heightForCellWithIdentifier:@"YGAllDetailTextCell" configuration:^(YGAllDetailTextCell *cell) {
-//            
-//            [cell.iconIV setImageWithURL:articleItem.object.imgUrl.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
-//        }];
-//    }
-//    
-//    if ([articleItem.objectType isEqualToString:@"2"]) {
-//        return [tableView fd_heightForCellWithIdentifier:@"YGAllDetailMovieCell" configuration:^(YGAllDetailMovieCell *cell) {
-//            [cell.iconIV setImageWithURL:articleItem.object.coverUrl.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
-//            cell.titleLB.text = articleItem.object.title;
-//            //如果为空就用空字符串代替
-//            if (articleItem.object.des == nil) {
-//                cell.detailLB.text = @"";
-//            } else {
-//                cell.detailLB.text = articleItem.object.des;
-//            }
-//        }];
-//    }
-//    
-//    return [tableView fd_heightForCellWithIdentifier:@"YGAllDetailPicCell" configuration:^(YGAllDetailPicCell *cell) {
-//        [cell.iconIV setImageWithURL:articleItem.object.imgUrl.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
-//        cell.titleLB.text = articleItem.object.des;
-//        cell.detailLB.text = [NSString stringWithFormat:@"《%@》", articleItem.object.sourceAuthor];
-//    }];
-//    
-//    
-//}
-
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return UITableViewAutomaticDimension;
+    YGAllDetailCategoryArticlelistItem *articleItem = self.detailCategoryArr[indexPath.row];
+    
+    if ([articleItem.objectType isEqualToString:@"1"]) {
+        return [tableView fd_heightForCellWithIdentifier:@"YGAllDetailTextCell" configuration:^(YGAllDetailTextCell *cell) {
+            
+            [cell.iconIV setImageWithURL:articleItem.object.imgUrl.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
+        }];
+    }
+    
+    if ([articleItem.objectType isEqualToString:@"2"]) {
+        return [tableView fd_heightForCellWithIdentifier:@"YGAllDetailMovieCell" configuration:^(YGAllDetailMovieCell *cell) {
+            [cell.iconIV setImageWithURL:articleItem.object.coverUrl.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
+            cell.titleLB.text = articleItem.object.title;
+            //如果为空就用空字符串代替
+            if (articleItem.object.des == nil) {
+                cell.detailLB.text = @"";
+            } else {
+                cell.detailLB.text = articleItem.object.des;
+            }
+        }];
+    }
+    
+    return [tableView fd_heightForCellWithIdentifier:@"YGAllDetailPicCell" configuration:^(YGAllDetailPicCell *cell) {
+        [cell.iconIV setImageWithURL:articleItem.object.imgUrl.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
+        cell.titleLB.text = articleItem.object.des;
+        cell.detailLB.text = [NSString stringWithFormat:@"《%@》", articleItem.object.sourceAuthor];
+    }];
+    
+    
 }
+
+
 
 #pragma mark - lazy
 - (NSMutableArray *)detailCategoryArr {

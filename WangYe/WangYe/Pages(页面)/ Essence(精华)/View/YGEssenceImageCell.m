@@ -34,7 +34,7 @@
         [_cellSeparator mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.offset(0);
             make.top.mas_equalTo(self.iconIV.mas_bottom).offset(0);
-            make.height.mas_equalTo(5);
+            make.height.mas_equalTo(5).priorityHigh();
             make.bottom.offset(0);
         }];
     }

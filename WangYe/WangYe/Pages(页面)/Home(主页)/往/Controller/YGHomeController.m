@@ -268,7 +268,7 @@
         [self.headerView addSubview:cellSeparator];
         [cellSeparator mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.left.right.offset(0);
-            make.height.mas_equalTo(5);
+            make.height.mas_equalTo(5).priorityHigh();
         }];
         
         _subTitle = [[UILabel alloc] init];

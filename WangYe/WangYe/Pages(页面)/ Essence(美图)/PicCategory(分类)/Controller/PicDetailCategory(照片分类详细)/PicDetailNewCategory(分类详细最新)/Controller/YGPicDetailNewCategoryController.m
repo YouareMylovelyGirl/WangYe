@@ -114,7 +114,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     YGPicCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     YGPicAllResDataItem *dataItem = self.picNewArr[indexPath.row];
-    [cell.iconIV setImageWithURL:dataItem.url.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
+    [cell.iconIV setImageWithURL:dataItem.thumb.yg_URL placeholder:[UIImage imageNamed:@"placeHolder1"]];
     
     return cell;
 }

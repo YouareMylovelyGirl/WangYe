@@ -84,4 +84,49 @@
     }];
 }
 
+
++ (id)GETPicCategoryItem:(void (^)(YGPicCategoryItem *, NSError *))completionHandler
+{
+    NSString *path = @"http://service.store.dandanjiang.tv/v1/wallpaper/category?height=1136&sys_language=zh-Hans-CN&width=640";
+    return [self GET:path param:nil completionHandler:^(id obj, NSError *error) {
+        !completionHandler ?: completionHandler([YGPicCategoryItem Parse:obj], error);
+    }];
+}
+
+
++ (id)GETPicDetailiNewItem:(NSInteger)pageCount ID:(NSString *)ID completionHandler:(void (^)(YGPicAllItem *, NSError *))completionHandler
+{
+    NSString *path = [NSString stringWithFormat:@"http://service.store.dandanjiang.tv/v1/wallpaper/resource?category_id=%@&height=1136&limit=60&skip=%ld&sys_language=zh-Hans-CN&width=640", ID, pageCount];
+    
+    return [self GET:path param:nil completionHandler:^(id obj, NSError *error) {
+        !completionHandler ?: completionHandler([YGPicAllItem Parse:obj], error);
+    }];
+}
+
+
++ (id)GETPicDetailHotItem:(NSInteger)pageCount ID:(NSString *)ID completionHandler:(void (^)(YGPicAllItem *, NSError *))completionHandler
+{
+    NSString *path = [NSString stringWithFormat:@"http://service.store.dandanjiang.tv/v1/wallpaper/resource?category_id=%@&height=1136&limit=60&order=hot&skip=%ld&sys_language=zh-Hans-CN&width=640", ID, pageCount];
+    return [self GET:path param:nil completionHandler:^(id obj, NSError *error) {
+        !completionHandler ?: completionHandler([YGPicAllItem Parse:obj], error);
+    }];
+}
+
+
++ (id)GETPicHotItem:(NSInteger)pageCount completionHandler:(void (^)(YGPicAllItem *, NSError *))completionHandler
+{
+    NSString *path = [NSString stringWithFormat:@"http://service.store.dandanjiang.tv/v1/wallpaper/resource?height=1136&limit=60&order=hot&skip=%ld&sys_language=zh-Hans-CN&width=640", pageCount];
+    return [self GET:path param:nil completionHandler:^(id obj, NSError *error) {
+        !completionHandler ?: completionHandler([YGPicAllItem Parse:obj], error);
+    }];
+}
+
+
++ (id)GETPicNewItem:(NSInteger)pageCount completionHandler:(void (^)(YGPicAllItem *, NSError *))completionHandler
+{
+    NSString *path = [NSString stringWithFormat:@"http://service.store.dandanjiang.tv/v1/wallpaper/resource?height=1136&limit=60&order=new&skip=%ld&sys_language=zh-Hans-CN&width=640", pageCount];
+    return [self GET:path param:nil completionHandler:^(id obj, NSError *error) {
+        !completionHandler ?: completionHandler([YGPicAllItem Parse:obj], error);
+    }];
+}
 @end

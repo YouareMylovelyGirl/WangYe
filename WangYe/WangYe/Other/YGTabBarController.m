@@ -12,6 +12,7 @@
 #import "YGListController.h"
 #import "YGListFlowLayout.h"
 #import "YGPageController.h"
+#import "YGPicPageController.h"
 @interface YGTabBarController ()
 
 @end
@@ -47,19 +48,19 @@
     pageVC.title = @"往夜";
     UINavigationController *homeNavi = [[UINavigationController alloc] initWithRootViewController:pageVC];
     
-    YGEssenceController *essenceVC = [[YGEssenceController alloc] initWithStyle:UITableViewStylePlain];
-    essenceVC.title = @"精选";
-    essenceVC.tabBarItem.image = @"tab_btn_list_default".yg_image;
-    essenceVC.tabBarItem.selectedImage = @"tab_btn_list_select".yg_image;
-    UINavigationController *essenceNavi = [[UINavigationController alloc] initWithRootViewController:essenceVC];
+    YGPicPageController *picPageVC = [[YGPicPageController alloc] init];
+    picPageVC.title = @"美图";
+    picPageVC.tabBarItem.image = @"tab_btn_list_default".yg_image;
+    picPageVC.tabBarItem.selectedImage = @"tab_btn_list_select".yg_image;
+    UINavigationController *picPageNavi = [[UINavigationController alloc] initWithRootViewController:picPageVC];
     
     YGListController *listVC = [[YGListController alloc] initWithCollectionViewLayout:[[YGListFlowLayout alloc] init]];
-    listVC.title = @"专题";
+    listVC.title = @"视频";
     listVC.tabBarItem.image = @"nav_ic_columns_default".yg_image;
     listVC.tabBarItem.selectedImage = @"nav_ic_columns_selected".yg_image;
     UINavigationController *listNavi = [[UINavigationController alloc] initWithRootViewController:listVC];
     
-    self.viewControllers = @[homeNavi, essenceNavi, listNavi];
+    self.viewControllers = @[homeNavi, picPageNavi, listNavi];
 }
 
 

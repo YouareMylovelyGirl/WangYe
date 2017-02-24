@@ -1,21 +1,22 @@
 //
-//  YGPageController.m
+//  YGPicPageController.m
 //  WangYe
 //
-//  Created by 阳光 on 2017/2/15.
+//  Created by 阳光 on 2017/2/24.
 //  Copyright © 2017年 YG. All rights reserved.
 //
 
-#import "YGPageController.h"
-#import "YGHomeController.h"
-#import "YGCategoryController.h"
-#import "YGEssenceController.h"
-@interface YGPageController ()
+#import "YGPicPageController.h"
+#import "YGPicCategoryController.h"
+#import "YGPicCategoryFlowLayout.h"
+#import "YGPicHotController.h"
+#import "YGPicFlowLayout.h"
+#import "YGPicNewController.h"
+@interface YGPicPageController ()
 
 @end
 
-@implementation YGPageController
-
+@implementation YGPicPageController
 //初始化方法
 - (instancetype)init
 {
@@ -28,17 +29,17 @@
         self.titleSizeSelected = 16;
         
         self.titleColorSelected = [UIColor orangeColor];
-//        self.automaticallyCalculatesItemWidths = YES; //根据题目的内容自动算宽度
+        //        self.automaticallyCalculatesItemWidths = YES; //根据题目的内容自动算宽度
         self.itemMargin = 30; //题目的间距
         self.menuHeight = 44;
-//        self.showOnNavigationBar = YES;
+        //        self.showOnNavigationBar = YES;
     }
     return self;
 }
 
 - (NSArray<NSString *> *)titles
 {
-    return @[@"最新", @"精华", @"分类"];
+    return @[@"最新", @"最热", @"分类"];
 }
 
 
@@ -50,15 +51,15 @@
 - (UIViewController *)pageController:(WMPageController *)pageController viewControllerAtIndex:(NSInteger)index
 {
     if (index == 0) {
-        YGHomeController *homeVC = [[YGHomeController alloc] init];
-        return homeVC;
+        YGPicNewController *newVC = [[YGPicNewController alloc] initWithCollectionViewLayout:[[YGPicFlowLayout alloc] init]];
+        return newVC;
     }
     if (index == 1) {
-        YGEssenceController *essenceVC = [[YGEssenceController alloc] init];
-        return essenceVC;
+        YGPicHotController *hotVC = [[YGPicHotController alloc] initWithCollectionViewLayout:[[YGPicFlowLayout alloc] init]];
+        return hotVC;
     }
-    YGCategoryController *cateVC = [[YGCategoryController alloc] init];
-    return cateVC;
+    YGPicCategoryController *allCateVC = [[YGPicCategoryController alloc] initWithCollectionViewLayout:[[YGPicCategoryFlowLayout alloc] init]];
+    return allCateVC;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -69,7 +70,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 @end

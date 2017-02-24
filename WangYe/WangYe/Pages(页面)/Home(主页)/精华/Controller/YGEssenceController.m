@@ -142,7 +142,6 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)configUI
 {
     self.view.backgroundColor = YGRGBColor(238, 238, 238);
-    self.tableView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
     
 }
 
@@ -156,7 +155,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBar.hidden = YES;
+//    self.navigationController.navigationBar.hidden = YES;
 }
 #pragma mark - Table view data source
 

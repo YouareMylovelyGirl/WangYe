@@ -137,8 +137,8 @@
     }
 }
 
-//停止滚动式调用
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+//停止滚动式调用  即将开始减速时候保存y值
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
 {
     _offsetY = scrollView.contentOffset.y;
 }

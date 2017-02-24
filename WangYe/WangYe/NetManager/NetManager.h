@@ -15,6 +15,8 @@
 #import "YGCategoryItem.h"
 #import "YGAllCategoryItem.h"
 #import "YGAllDetailCategoryItem.h"
+#import "YGPicCategoryItem.h"
+#import "YGPicAllItem.h"
 @interface NetManager : BaseNetManager
 //精华页
 + (id)GETEssenceItem:(NSString *)lastKey completionHandler:(void(^)(YGEssenceItem *essences, NSError *error))completionHandler;
@@ -39,4 +41,19 @@
 
 //夜 全部分类 全部分类
 + (id)GETAllDetailCategory:(NSInteger)page ID:(NSString *)ID completionHandler:(void(^)(YGAllDetailCategoryItem *allDetailCategoryItem, NSError *error))completionHandler;
+
+//美图分类
++ (id)GETPicCategoryItem:(void(^)(YGPicCategoryItem *picCategoryItem, NSError *error))completionHandler;
+
+//美图分类详细 最新
++ (id)GETPicDetailiNewItem:(NSInteger)pageCount ID:(NSString *)ID completionHandler:(void(^)(YGPicAllItem *picDetailNewItem, NSError *error))completionHandler;
+
+//美图分类详细 最热
++ (id)GETPicDetailHotItem:(NSInteger)pageCount ID:(NSString *)ID completionHandler:(void(^)(YGPicAllItem *picDetailNewItem, NSError *error))completionHandler;
+
+//美图最热
++ (id)GETPicHotItem:(NSInteger)pageCount completionHandler:(void(^)(YGPicAllItem *picHotItem, NSError *error))completionHandler;
+
+//美图最新
++ (id)GETPicNewItem:(NSInteger)pageCount completionHandler:(void(^)(YGPicAllItem *picNewItem, NSError *error))completionHandler;
 @end

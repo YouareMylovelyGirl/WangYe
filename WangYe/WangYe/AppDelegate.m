@@ -47,6 +47,12 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+    YYImageCache *cache = [YYWebImageManager sharedManager].cache;
+    
+    // 清空缓存
+    [cache.memoryCache removeAllObjects];
+    [cache.diskCache removeAllObjects];
 }
 
 

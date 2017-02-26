@@ -326,16 +326,9 @@
     CGFloat scale = 365 / 750.0;
     
     CGPoint p = scrollView.contentOffset;
-    if (p.y >= 0) { //这里向上移动图片不变小
-        self.iconIV.frame = CGRectMake(0, 0, YGScreenW, YGScreenW * scale);
-        return;
-    }
-    CGRect frame = self.headView.frame;
-    frame.size.height = YGScreenW * scale - p.y;
-    frame.origin.y = p.y;
-    self.iconIV.frame = frame;
-    
+
     if (p.y >= YGScreenW * scale - 64) {
+        
         self.TopNavView.hidden = NO;
         [self.backBtn setBackgroundImage:[UIImage imageNamed:@"Action_backward_44x44_"] forState:UIControlStateNormal];
         [UIApplication sharedApplication].statusBarHidden = NO;
@@ -348,6 +341,17 @@
     [self.headLabel mas_updateConstraints:^(MASConstraintMaker *make) {
         make.center.offset(0);
     }];
+    
+    
+    if (p.y >= 0) { //这里向上移动图片不变小
+        self.iconIV.frame = CGRectMake(0, 0, YGScreenW, YGScreenW * scale);
+        return;
+    }
+    CGRect frame = self.headView.frame;
+    frame.size.height = YGScreenW * scale - p.y;
+    frame.origin.y = p.y;
+    self.iconIV.frame = frame;
+    NSLog(@"%lf-------%lf", p.y, YGScreenW * scale - 64);
 }
 
 #pragma mark - 高性能计算行高
